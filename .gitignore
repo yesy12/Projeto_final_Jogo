@@ -1,0 +1,13 @@
+Library
+Logs
+Packages
+ProjectSettings
+Temp
+
+Assets/Scenes
+Assets/Material
+Assets/Imagens
+Assets/Export_Objects_3ds
+
+*.meta
+*.asset
