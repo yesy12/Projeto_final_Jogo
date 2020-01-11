@@ -1,18 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!65 &3836240821805189770
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4228662450522554971}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 157.34135, y: 183.78009, z: 225.03564}
-  m_Center: {x: -44.789146, y: 91.390045, z: 1048.5244}
 --- !u!65 &266160402589762402
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -52,6 +39,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 12.054321, y: 71.231964, z: 44.6521}
   m_Center: {x: -129.9501, y: 97.771515, z: 991.59717}
+--- !u!65 &3836240821805189770
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4228662450522554971}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 157.34135, y: 183.78009, z: 225.03564}
+  m_Center: {x: -44.789146, y: 91.390045, z: 1048.5244}
+--- !u!65 &5838013928501936561
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4228662450522554971}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 44.742294, y: 53.265976, z: 12.468018}
+  m_Center: {x: -47.227623, y: 25.309849, z: 852.80347}
 --- !u!65 &6303875809619147439
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -78,19 +91,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 110.13641, y: 111.604675, z: 77.9447}
   m_Center: {x: -49.55597, y: 55.86557, z: 896.97015}
---- !u!65 &5838013928501936561
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4228662450522554971}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 44.742294, y: 53.265976, z: 12.468018}
-  m_Center: {x: -47.227623, y: 25.309849, z: 852.80347}
 --- !u!1001 &4228662450522653921
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -100,6 +100,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100026, guid: e075da877cd6b0a4bae85689f17e4def, type: 3}
       propertyPath: m_Name
+      value: casa6PosFab
+      objectReference: {fileID: 0}
+    - target: {fileID: 100026, guid: e075da877cd6b0a4bae85689f17e4def, type: 3}
+      propertyPath: m_TagString
       value: casa6
       objectReference: {fileID: 0}
     - target: {fileID: 400026, guid: e075da877cd6b0a4bae85689f17e4def, type: 3}

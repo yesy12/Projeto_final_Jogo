@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!65 &7658747254981002340
+--- !u!65 &3279669766632406507
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11,8 +11,21 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 158.06645, y: 183.54517, z: 113.72586}
-  m_Center: {x: -42.27353, y: 141.44522, z: 221.36168}
+  m_Size: {x: 7.963852, y: 53.074707, z: 47.03128}
+  m_Center: {x: -126.7309, y: 76.03667, z: 222.81993}
+--- !u!65 &4842562526537829903
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4287836428376086251}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 70.14529, y: 47.425354, z: 10.678528}
+  m_Center: {x: -156.44566, y: 133.62218, z: 159.73721}
 --- !u!65 &5021886593726207642
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39,32 +52,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 59.65499, y: 60.81601, z: 13.115601}
   m_Center: {x: -39.242367, y: 112.7959, z: 282.8122}
---- !u!65 &4842562526537829903
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4287836428376086251}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 70.14529, y: 47.425354, z: 10.678528}
-  m_Center: {x: -156.44566, y: 133.62218, z: 159.73721}
---- !u!65 &3279669766632406507
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4287836428376086251}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 7.963852, y: 53.074707, z: 47.03128}
-  m_Center: {x: -126.7309, y: 76.03667, z: 222.81993}
 --- !u!65 &6775433763159676773
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -78,6 +65,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 12.077133, y: 54.144104, z: 46.496704}
   m_Center: {x: -128.78757, y: 151.4151, z: 219.87964}
+--- !u!65 &7658747254981002340
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4287836428376086251}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 158.06645, y: 183.54517, z: 113.72586}
+  m_Center: {x: -42.27353, y: 141.44522, z: 221.36168}
 --- !u!1001 &4287836428376182875
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -87,6 +87,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100016, guid: 72ec5bd1a8351c34ea797afcd2fdc57a, type: 3}
       propertyPath: m_Name
+      value: casa7PosFab
+      objectReference: {fileID: 0}
+    - target: {fileID: 100016, guid: 72ec5bd1a8351c34ea797afcd2fdc57a, type: 3}
+      propertyPath: m_TagString
       value: casa7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 72ec5bd1a8351c34ea797afcd2fdc57a, type: 3}

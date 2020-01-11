@@ -22,6 +22,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: a2fc4b8b17710e44cbb2e32068c6b938, type: 3}
       propertyPath: m_Name
+      value: casa1PosFab
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a2fc4b8b17710e44cbb2e32068c6b938, type: 3}
+      propertyPath: m_TagString
       value: casa1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a2fc4b8b17710e44cbb2e32068c6b938, type: 3}

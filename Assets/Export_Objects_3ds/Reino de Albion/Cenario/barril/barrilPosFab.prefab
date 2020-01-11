@@ -23,6 +23,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100002, guid: e5fab3d202912914a8bb51c9b7637805, type: 3}
       propertyPath: m_Name
+      value: barrilPosFab
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: e5fab3d202912914a8bb51c9b7637805, type: 3}
+      propertyPath: m_TagString
       value: barril
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: e5fab3d202912914a8bb51c9b7637805, type: 3}

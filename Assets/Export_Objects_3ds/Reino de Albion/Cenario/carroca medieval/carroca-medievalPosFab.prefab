@@ -156,6 +156,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100016, guid: a2f2ca63a119e474ea5840284e1c403b, type: 3}
       propertyPath: m_Name
+      value: carroca-medievalPosFab
+      objectReference: {fileID: 0}
+    - target: {fileID: 100016, guid: a2f2ca63a119e474ea5840284e1c403b, type: 3}
+      propertyPath: m_TagString
       value: carroca-medieval
       objectReference: {fileID: 0}
     - target: {fileID: 400016, guid: a2f2ca63a119e474ea5840284e1c403b, type: 3}

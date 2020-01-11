@@ -396,8 +396,8 @@ GameObject:
   - component: {fileID: 4881074087371482697}
   - component: {fileID: 4881074086572996446}
   m_Layer: 0
-  m_Name: torre-albion
-  m_TagString: Untagged
+  m_Name: torre-albion-PosFab
+  m_TagString: torre-albion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

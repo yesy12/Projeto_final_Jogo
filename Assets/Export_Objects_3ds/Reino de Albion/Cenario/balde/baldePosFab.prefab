@@ -23,6 +23,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 2e7e979233969474da4038ad878e3516, type: 3}
       propertyPath: m_Name
+      value: baldePosFab
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2e7e979233969474da4038ad878e3516, type: 3}
+      propertyPath: m_TagString
       value: balde
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2e7e979233969474da4038ad878e3516, type: 3}

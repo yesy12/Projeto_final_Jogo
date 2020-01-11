@@ -1,18 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!65 &6486793269921793769
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2101154010248645868}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 34.442352, y: 43.638382, z: 41.658295}
-  m_Center: {x: -69.27345, y: 22.10765, z: 8.054733}
 --- !u!65 &1334553090566103297
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26,19 +13,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 35.76703, y: 1.4542618, z: 2.531372}
   m_Center: {x: -69.93579, y: 18.89803, z: -13.954208}
---- !u!65 &7396386577366392404
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2101154010248645868}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 5.683014, y: 1.5126114, z: 43.630844}
-  m_Center: {x: -86.19557, y: 18.927204, z: 6.5955276}
 --- !u!65 &4404024553973321204
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -52,6 +26,32 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.273926, y: 1.5948105, z: 43.630844}
   m_Center: {x: -54.373566, y: 18.859715, z: 6.5955276}
+--- !u!65 &6486793269921793769
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101154010248645868}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 34.442352, y: 43.638382, z: 41.658295}
+  m_Center: {x: -69.27345, y: 22.10765, z: 8.054733}
+--- !u!65 &7396386577366392404
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101154010248645868}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.683014, y: 1.5126114, z: 43.630844}
+  m_Center: {x: -86.19557, y: 18.927204, z: 6.5955276}
 --- !u!1001 &2101154010248743500
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -61,6 +61,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 3c7ae8b8d823d254b8f2b3919c608b94, type: 3}
       propertyPath: m_Name
+      value: barracaPosFab
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 3c7ae8b8d823d254b8f2b3919c608b94, type: 3}
+      propertyPath: m_TagString
       value: barraca
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 3c7ae8b8d823d254b8f2b3919c608b94, type: 3}
