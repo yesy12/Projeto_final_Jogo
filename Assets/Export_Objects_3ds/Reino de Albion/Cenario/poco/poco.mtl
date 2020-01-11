@@ -1,0 +1,58 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 18.10.2019 19:49:20
+
+newmtl Material__32
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Aluno User\Downloads\Nova pasta\poco\textures\Decorlu-Papel-de-parede-importado-vinilico-textura-pedra-escura-3D-1283-187306-2.jpg
+	map_Kd C:\Users\Aluno User\Downloads\Nova pasta\poco\textures\Decorlu-Papel-de-parede-importado-vinilico-textura-pedra-escura-3D-1283-187306-2.jpg
+
+newmtl 07___Default
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Aluno User\Downloads\Nova pasta\poco\textures\telhado-textura.jpg
+	map_Kd C:\Users\Aluno User\Downloads\Nova pasta\poco\textures\telhado-textura.jpg
+
+newmtl Material__27
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Aluno User\Downloads\Nova pasta\poco\textures\black-wall-surface-background_23-2148067232.jpg
+	map_Kd C:\Users\Aluno User\Downloads\Nova pasta\poco\textures\black-wall-surface-background_23-2148067232.jpg
+
+newmtl Material__31
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Aluno User\Downloads\Nova pasta\poco\textures\33591.jpg
+	map_Kd C:\Users\Aluno User\Downloads\Nova pasta\poco\textures\33591.jpg

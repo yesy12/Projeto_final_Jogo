@@ -1,0 +1,58 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 18.10.2019 19:57:52
+
+newmtl 02___Default
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Aluno User\Downloads\Nova pasta\carroça medieval\textures\33591.jpg
+	map_Kd C:\Users\Aluno User\Downloads\Nova pasta\carroça medieval\textures\33591.jpg
+
+newmtl 01___Default
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Aluno User\Downloads\Nova pasta\carroça medieval\textures\3e0e3a3f13806bf63cb7b9892c042ea6 (1)-escuro.jpg
+	map_Kd C:\Users\Aluno User\Downloads\Nova pasta\carroça medieval\textures\3e0e3a3f13806bf63cb7b9892c042ea6 (1)-escuro.jpg
+
+newmtl 07___Default
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Aluno User\Downloads\Nova pasta\carroça medieval\textures\99.jpg
+	map_Kd C:\Users\Aluno User\Downloads\Nova pasta\carroça medieval\textures\99.jpg
+
+newmtl 03___Default
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Aluno User\Downloads\Nova pasta\carroça medieval\textures\depositphotos_181833190-stock-photo-abstract-texture-background-of-the.jpg
+	map_Kd C:\Users\Aluno User\Downloads\Nova pasta\carroça medieval\textures\depositphotos_181833190-stock-photo-abstract-texture-background-of-the.jpg

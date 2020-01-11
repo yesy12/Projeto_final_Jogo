@@ -1,0 +1,128 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 18.10.2019 21:07:22
+
+newmtl 06___Default
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Aluno User\Downloads\Nova pasta\casas\casa4\textures\uvw-telhado-2.jpg
+	map_Kd C:\Users\Aluno User\Downloads\Nova pasta\casas\casa4\textures\uvw-telhado-2.jpg
+
+newmtl 05___Default
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Aluno User\Downloads\Nova pasta\casas\casa4\textures\uv-paredes-casa2.jpg
+	map_Kd C:\Users\Aluno User\Downloads\Nova pasta\casas\casa4\textures\uv-paredes-casa2.jpg
+
+newmtl 04___Default
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Aluno User\Downloads\Nova pasta\casas\casa4\textures\uv-paredes-lado-casa2.jpg
+	map_Kd C:\Users\Aluno User\Downloads\Nova pasta\casas\casa4\textures\uv-paredes-lado-casa2.jpg
+
+newmtl 12___Default
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Aluno User\Downloads\Nova pasta\casas\casa4\textures\uvw-porta-casa2.jpg
+	map_Kd C:\Users\Aluno User\Downloads\Nova pasta\casas\casa4\textures\uvw-porta-casa2.jpg
+
+newmtl 08___Default
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Aluno User\Downloads\Nova pasta\casas\casa4\textures\uv-janela1.jpg
+	map_Kd C:\Users\Aluno User\Downloads\Nova pasta\casas\casa4\textures\uv-janela1.jpg
+
+newmtl 09___Default
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Aluno User\Downloads\Nova pasta\casas\casa4\textures\black-wall-surface-background_23-2148067232.jpg
+	map_Kd C:\Users\Aluno User\Downloads\Nova pasta\casas\casa4\textures\black-wall-surface-background_23-2148067232.jpg
+
+newmtl 10___Default
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Aluno User\Downloads\Nova pasta\casas\casa4\textures\porta-medieval2.jpg
+	map_Kd C:\Users\Aluno User\Downloads\Nova pasta\casas\casa4\textures\porta-medieval2.jpg
+
+newmtl 18___Default
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Aluno User\Downloads\Nova pasta\casas\casa4\textures\uv-meio-parede.jpg
+	map_Kd C:\Users\Aluno User\Downloads\Nova pasta\casas\casa4\textures\uv-meio-parede.jpg
+
+newmtl 11___Default
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka C:\Users\Aluno User\Downloads\Nova pasta\casas\casa4\textures\uvw-porta-casa2.1.jpg
+	map_Kd C:\Users\Aluno User\Downloads\Nova pasta\casas\casa4\textures\uvw-porta-casa2.1.jpg
