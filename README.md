@@ -1,5 +1,5 @@
 # Projeto_final_Jogo
 
-This repository is storing the scripts, in our game produced in a group of 7 people.
+Este repositório está armazenando os arquivos do meu jogo, produzidos em um grupo de 7 pessoas.
 
-All scripts were made by me Alison.
+Todos os scripts foram feitos por mim, Alison.
