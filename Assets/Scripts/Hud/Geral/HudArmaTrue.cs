@@ -11,7 +11,7 @@ public class HudArmaTrue : MonoBehaviour{
     public static bool Arma1Bool;
     public static bool Arma2Bool;
 
-    // Icone 1
+    // Arma1 
     public GameObject Arma1Espada;
     public GameObject Arma1Machado;
 
@@ -36,8 +36,7 @@ public class HudArmaTrue : MonoBehaviour{
     public Text Arma1TextDurabilidade;
     public Text Arma2TextDurabilidade;
 
-
-    //Dano
+    //dano
     public static int dano;
 
 
@@ -54,18 +53,6 @@ public class HudArmaTrue : MonoBehaviour{
             setArmaSwitchBool(false);
         }
     }
-
-/*
-f(returnArma1SelectBool() == false &&  returnArmaString1() == "espada"){
-            
-            Arma1DurabilidadeText.text = returnArma1DurabilidadeAtual() + "/" + returnArma1DurabilidadeMaximo();
-        }
-        if(returnArma2SelectBool() == false && returnArmaString2() == "machado"){
-
-            Arma2DurabilidadeText.text = returnArma2DurabilidadeAtual() + "/" + returnArma2DurabilidadeMaximo();    
-        }
-
-*/
 
     void selecaoArma(){
         if(returnArma1Bool() == false){
@@ -190,9 +177,11 @@ f(returnArma1SelectBool() == false &&  returnArmaString1() == "espada"){
 
     public static void setArmaDurabilidade_Arma1_Arma2(int quantidade){
         if(returnArma1Bool() == false){
+            Debug.Log(quantidade);
             setArma1Durabilidade_Atual_Maxima(quantidade);
         }
         else if(returnArma2Bool() == false){
+            Debug.Log(quantidade);
             setArma2Durabilidade_Atual_Maxima(quantidade);
         }
     }
@@ -208,8 +197,6 @@ f(returnArma1SelectBool() == false &&  returnArmaString1() == "espada"){
     public static void setDano(int quantidade){
         dano = quantidade;
     }
-
-
 
 
     //Returns
@@ -248,6 +235,5 @@ f(returnArma1SelectBool() == false &&  returnArmaString1() == "espada"){
     public static int returnDano(){
         return dano;
     }
-
 
 }
