@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class MessagePanel : MonoBehaviour{
- 
+
     public GameObject messagePanelItem;
     public static bool messageItemTrue;
 
@@ -30,7 +30,7 @@ public class MessagePanel : MonoBehaviour{
 
 
     public GameObject dano_curaPanelItem;
-    public Text dano_curaPanelItem;
+    public Text dano_curaPanelText;
     public static string dano_cura;
     public static bool dano_curaItemTrue;   
 
@@ -253,7 +253,7 @@ public class MessagePanel : MonoBehaviour{
     }
 
     public void setDanoValorHud(string texto){
-        dano_curaPanelItem.text = texto;
+        dano_curaPanelText.text = texto;
     }
 
 
