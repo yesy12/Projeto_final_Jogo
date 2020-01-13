@@ -177,11 +177,9 @@ public class HudArmaTrue : MonoBehaviour{
 
     public static void setArmaDurabilidade_Arma1_Arma2(int quantidade){
         if(returnArma1Bool() == false){
-            Debug.Log(quantidade);
             setArma1Durabilidade_Atual_Maxima(quantidade);
         }
         else if(returnArma2Bool() == false){
-            Debug.Log(quantidade);
             setArma2Durabilidade_Atual_Maxima(quantidade);
         }
     }
