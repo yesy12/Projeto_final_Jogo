@@ -36,7 +36,11 @@ public class MessagePanel : MonoBehaviour{
 
 
     void Awake(){
-        SetItensTrueOrFalse(false);
+        SetItensTrueOrFalse(true);
+        // setDescricaoValor("espada");
+        // setDurabilidadeValor("Durabilidade 100/100");
+        // setNivelValor("Nivel 5");
+        // setDanoValor("Dano 7");
     }
 
     void FixedUpdate(){
