@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class MessagePanel : MonoBehaviour{
-
+ 
     public GameObject messagePanelItem;
     public static bool messageItemTrue;
 
@@ -29,10 +29,10 @@ public class MessagePanel : MonoBehaviour{
     public static bool nivelItemTrue;   
 
 
-    public GameObject danoPanelItem;
-    public Text danoPanelText;
-    public static string dano;
-    public static bool danoItemTrue;   
+    public GameObject dano_curaPanelItem;
+    public Text dano_curaPanelItem;
+    public static string dano_cura;
+    public static bool dano_curaItemTrue;   
 
 
     void Awake(){
@@ -137,7 +137,7 @@ public class MessagePanel : MonoBehaviour{
     }
 
     public void OpenDanoPanel(){
-        danoPanelItem.SetActive(true);
+        dano_curaPanelItem.SetActive(true);
     }
 
 
@@ -163,7 +163,7 @@ public class MessagePanel : MonoBehaviour{
     }       
 
     public void CloseDanoPanel(){
-        danoPanelItem.SetActive(false);
+        dano_curaPanelItem.SetActive(false);
     }       
 
     /*
@@ -189,7 +189,7 @@ public class MessagePanel : MonoBehaviour{
     }
 
     public static void setDanoTrue(bool selecao){
-        danoItemTrue = selecao;
+        dano_curaItemTrue = selecao;
     }
 
 
@@ -214,7 +214,7 @@ public class MessagePanel : MonoBehaviour{
     }
 
     public static void setDanoValor(string texto){
-        dano = texto;
+        dano_cura = texto;
     }
 
 
@@ -233,7 +233,7 @@ public class MessagePanel : MonoBehaviour{
     }
 
     public static string returnDanoValor(){
-        return dano;
+        return dano_cura;
     }
 
 
@@ -253,7 +253,7 @@ public class MessagePanel : MonoBehaviour{
     }
 
     public void setDanoValorHud(string texto){
-        danoPanelText.text = texto;
+        dano_curaPanelItem.text = texto;
     }
 
 
@@ -276,7 +276,7 @@ public class MessagePanel : MonoBehaviour{
     }
 
     public bool returnDanoTrue(){
-        return danoItemTrue;
+        return dano_curaItemTrue;
     }
 
 }
