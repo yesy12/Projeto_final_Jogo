@@ -13,7 +13,7 @@ public class pickObject : MonoBehaviour{
     public ArmorSetDurability ObjetoArmorSetDurability;
 
     void FixedUpdate(){
-        removerItem();
+        // removerItem();
     }
 
     void OnTriggerEnter(Collider other) {
@@ -21,7 +21,7 @@ public class pickObject : MonoBehaviour{
 
         if(select == "espada" || select == "machado"){
             objeto = other.gameObject;
-
+            
             getComponent();
             setMessagePanelInfo(select);
         }
