@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Diagnostics;
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,12 +21,15 @@ public class ButtonInventario : MonoBehaviour{
     }
 
     public void ButtonClickArma1(){
-        setTrueFunction();
-        
-        setDescricaoRecurso("Espada");   
-        setDurabilidade_QuantidadeRecurso("Durabilidade uuu/uuu");
-        setNivelRecurso("Nivel 87");  
-        setDano_Cura("Dano 87");   
+        print(HudArmaTrue.returnArma1Bool());
+        if(HudArmaTrue.returnArma1Bool() == true){
+            setTrueFunction();
+            
+            setDescricaoRecurso("Espada");   
+            setDurabilidade_QuantidadeRecurso("Durabilidade uuu/uuu");
+            setNivelRecurso("Nivel 87");  
+            setDano_Cura("Dano 87");   
+        }
     }
 
     public void ButtonClickArma2(){

@@ -15,6 +15,8 @@ public class personagem : MonoBehaviour{
     public static bool apertouE;
     public static bool apertouI;
 
+    public static string armaSelecionada;
+
     void Awake(){
        setApertouE(false);
        setApertouI(false);
@@ -35,6 +37,7 @@ public class personagem : MonoBehaviour{
 
     void FixedUpdate(){
         ControlesHudBar();
+        Click_mouse();
         //verificarDano();
     }
 
@@ -139,9 +142,11 @@ public class personagem : MonoBehaviour{
         }
         else if(Input.GetKeyDown("1")){
             if(HudArmaTrue.returnArma1Bool() == true){
-                print("Arma 1");
+                // HudArmaTrue.setDiminuirArma1DurabilidadeAtual(1);
+                setArmaSelecionada("arma1");
             }
             else{
+                setArmaSelecionada("");  
                 FaltaDeRecurso.setMessageRecursoTrue(true);
                 FaltaDeRecurso.setMessageRecursoFaltante("1");                
             }
@@ -150,9 +155,10 @@ public class personagem : MonoBehaviour{
         }
         else if(Input.GetKeyDown("2")){
             if(HudArmaTrue.returnArma2Bool() == true){
-                print("Arma 2");
+                setArmaSelecionada("arma2");
             }
             else{
+                setArmaSelecionada("");  
                 FaltaDeRecurso.setMessageRecursoTrue(true);
                 FaltaDeRecurso.setMessageRecursoFaltante("2");                
             }
@@ -160,7 +166,8 @@ public class personagem : MonoBehaviour{
             //HudArmaTrue.Arma2DurabilidadeAtual -=1;
             BorderSelected.setItemSelect(2);
         }        
-        else if(Input.GetKeyDown("3")){           
+        else if(Input.GetKeyDown("3")){ 
+            setArmaSelecionada("");            
             if(InventarioHud.returnQuantidadePocoesLifeInt() > 0){
                 LifeNoPercent.somarVida(10);
                 InventarioHud.diminuirPocoesLife(1);
@@ -172,9 +179,10 @@ public class personagem : MonoBehaviour{
             BorderSelected.setItemSelect(3);
         }
         else if(Input.GetKeyDown("4")){
+            setArmaSelecionada("");  
             if(InventarioHud.returnQuantidadePocoesStaminaInt() > 0){
                 StaminaNoPercent.somarStamina(10);
-                InventarioHud.diminuirPocoesStamina(1);
+                InventarioHud.diminuirPocoesStamina(1); 
             }
             else{
                 FaltaDeRecurso.setMessageRecursoTrue(true);
@@ -183,6 +191,7 @@ public class personagem : MonoBehaviour{
             BorderSelected.setItemSelect(4);
         }
         else if(Input.GetKeyDown("5")){
+            setArmaSelecionada("");  
             if(InventarioHud.returnQuantidadePocoesXpInt() > 0){
                 XpNoPercent.somaXp(1);
                 InventarioHud.diminuirPocoesXp(1);
@@ -194,6 +203,7 @@ public class personagem : MonoBehaviour{
             BorderSelected.setItemSelect(5);    
         }
         else if(Input.GetKeyDown("6")){
+            setArmaSelecionada("0");  
             if(InventarioHud.returnQuantidadeBauInt() > 0){
                 //XpNoPercent.somaXp(1);
                 InventarioHud.diminuirBau(1);
@@ -203,8 +213,26 @@ public class personagem : MonoBehaviour{
                 FaltaDeRecurso.setMessageRecursoFaltante("6");
             }  
             BorderSelected.setItemSelect(6);     
-        }       
+        }   
+     
     }
+
+    void Click_mouse(){
+        var arma1Bool = HudArmaTrue.returnArma1Bool();
+        var arma2Bool = HudArmaTrue.returnArma2Bool();
+
+        if(arma1Bool == true ||  arma2Bool == true){
+            if(Input.GetMouseButtonDown(0)){
+                if(returnArmaSelecionada() == "arma1"){
+                    HudArmaTrue.setDiminuirArma1DurabilidadeAtual(1);
+                }
+                else if(returnArmaSelecionada() == "arma2"){
+                    HudArmaTrue.setDiminuirArma2DurabilidadeAtual(1);
+                }
+            }
+        }
+    }
+
 
     public static void setApertouE(bool selecao){
         apertouE = selecao;
@@ -238,5 +266,12 @@ public class personagem : MonoBehaviour{
         return danoArma2;
     }
 
+    public static void setArmaSelecionada(string texto){
+        armaSelecionada = texto;
+    }
+
+    public static string returnArmaSelecionada(){
+        return armaSelecionada;
+    }
 
 }

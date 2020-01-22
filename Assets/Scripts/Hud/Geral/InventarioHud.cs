@@ -504,7 +504,8 @@ public class InventarioHud : MonoBehaviour{
 
     public static void setDanoRecursoPanelText(string texto){
         danoRecursoPanelString = texto;
-    }   
+    }
+       
     public static string returnDanoRecursoPanelText(){
         return danoRecursoPanelString;
     }

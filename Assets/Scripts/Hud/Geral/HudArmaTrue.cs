@@ -39,6 +39,13 @@ public class HudArmaTrue : MonoBehaviour{
     //dano
     public static int dano;
 
+    // Nivel
+    public static int Arma1Nivel;
+    public static int Arma2Nivel;
+
+    //Dano 
+    public static int Arma1Dano;
+    public static int Arma2Dano;
 
     public static string ArmaString;
 
@@ -46,6 +53,14 @@ public class HudArmaTrue : MonoBehaviour{
         setArmaSwitchBool(false);
     }
 
+    void Update(){
+        if(returnArma1Bool() == true){
+            setArma1DurabilidadeText();
+        }
+        if(returnArma2Bool() == true){
+            setArma2DurabilidadeText();
+        }
+    }
 
     void FixedUpdate(){
         if(returnArmaSwitchBool() == true){
@@ -153,9 +168,18 @@ public class HudArmaTrue : MonoBehaviour{
         Arma1DurabilidadeAtual = quantidade;
     }
 
+    public static void setDiminuirArma1DurabilidadeAtual(int quantidade){
+        Arma1DurabilidadeAtual -= quantidade;
+    }
+
     public static void setArma2DurabilidadeAtual(int quantidade){
         Arma2DurabilidadeAtual = quantidade;
     }
+
+    public static void setDiminuirArma2DurabilidadeAtual(int quantidade){
+        Arma2DurabilidadeAtual -= quantidade;
+    }
+
 
     public static void setArma1DurabilidadeMaxima(int quantidade){
         Arma1DurabilidadeMaxima = quantidade;
@@ -165,11 +189,34 @@ public class HudArmaTrue : MonoBehaviour{
         Arma2DurabilidadeMaxima = quantidade;
     }
 
+    public static void setArma1Nivel(int quantidade){
+        Arma1Nivel = quantidade;
+    }
+
+    public static void setArma2Nivel(int quantidade){
+        Arma2Nivel = quantidade;
+    }
+
+    public static void setArma1Dano(int quantidade){
+        Arma1Dano = quantidade;
+    }
+
+    public static void setArma2Dano(int quantidade){
+        Arma2Dano = quantidade;
+    }
+
+    
+
+
+    public static void setArma2Level(int quantidade){
+        Arma2DurabilidadeMaxima = quantidade;
+    }
+
     public static void setArma1Durabilidade_Atual_Maxima(int quantidade){
         setArma1DurabilidadeAtual(quantidade);
         setArma1DurabilidadeMaxima(quantidade);
     }
-
+    
     public static void setArma2Durabilidade_Atual_Maxima(int quantidade){
         setArma2DurabilidadeAtual(quantidade);
         setArma2DurabilidadeMaxima(quantidade);
@@ -181,6 +228,24 @@ public class HudArmaTrue : MonoBehaviour{
         }
         else if(returnArma2Bool() == false){
             setArma2Durabilidade_Atual_Maxima(quantidade);
+        }
+    }
+
+    public static void setArmaLevel_Arma1_Arma2(int quantidade){
+        if(returnArma1Bool() == false){
+            setArma1Nivel(quantidade);
+        }
+        else if(returnArma2Bool() == false){
+            setArma2Nivel(quantidade);
+        }
+    }
+
+    public static void setArmaDano_Arma1_Arma2(int quantidade){
+        if(returnArma1Bool() == false){
+            setArma1Dano(quantidade);
+        }
+        else if(returnArma2Bool() == false){
+            setArma2Dano(quantidade);
         }
     }
 

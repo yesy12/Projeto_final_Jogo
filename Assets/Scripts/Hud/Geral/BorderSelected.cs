@@ -4,83 +4,118 @@ using UnityEngine;
 
 public class BorderSelected : MonoBehaviour{
 
-    //Arma1
-    public GameObject Arma1BorderSelected;
-    public GameObject Arma1Border;
+    //Slot1
+    public GameObject Slot1Border;
+    public GameObject Slot1BorderSelected;
+    
 
-     //Arma2
-    public GameObject Arma2BorderSelected;
-    public GameObject Arma2Border;
+    //Slot2
+    public GameObject Slot2Border;
+    public GameObject Slot2BorderSelected;
 
-    //Life
-    public GameObject LifeBorderSelected;
-    public GameObject LifeBorder;
+    //Slot3
+    public GameObject Slot3Border;
+    public GameObject Slot3BorderSelected;
 
-     //Stamina
-    public GameObject StaminaBorderSelected;
-    public GameObject StaminaBorder;
+    //Slot4
+    public GameObject Slot4Border;
+    public GameObject Slot4BorderSelected;
 
-     //Xp
-    public GameObject XpBorderSelected;
-    public GameObject XpBorder;
+    //Slot5
+    public GameObject Slot5Border;
+    public GameObject Slot5BorderSelected;
 
-    //Bau
-    public GameObject BauBorderSelected;
-    public GameObject BauBorder;
+    //Slot6
+    public GameObject Slot6Border;
+    public GameObject Slot6BorderSelected;
 
     public static int ItemSelect;
+    public static int ultimoItemSelect;
+    public static bool destruirUltimoItemSelect;
 
     void Awake(){
         setItemSelect(0);
     }
 
-
-    void Update(){
+    void FixedUpdate(){
         BorderSelectedSwitch();
+        if(returnDestruir() == true){
+            dissableBorder();
+        }
     }
 
     void BorderSelectedSwitch(){
         if(returnItemSelect() == 1){
-            Arma1BorderSelected.SetActive(true);
-            Arma1Border.SetActive(false);
-            dissableBorder();
+            Slot1BorderSelected.SetActive(true);
         }
         else if(returnItemSelect() == 2){
-            Arma2BorderSelected.SetActive(true);
-            Arma2Border.SetActive(false);
-            dissableBorder();
+            Slot2BorderSelected.SetActive(true);
         }
         else if(returnItemSelect() == 3){
-            LifeBorderSelected.SetActive(true);
-            LifeBorder.SetActive(false);
-            dissableBorder();
-        }        
+            Slot3BorderSelected.SetActive(true);
+        }
         else if(returnItemSelect() == 4){
-            StaminaBorderSelected.SetActive(true);
-            StaminaBorder.SetActive(false);
-            dissableBorder();
-        }       
+            Slot4BorderSelected.SetActive(true);
+        }
         else if(returnItemSelect() == 5){
-            XpBorderSelected.SetActive(true);
-            XpBorder.SetActive(false);
-            dissableBorder();
+            Slot5BorderSelected.SetActive(true);
         }
         else if(returnItemSelect() == 6){
-            BauBorderSelected.SetActive(true);
-            BauBorder.SetActive(false);
-            dissableBorder();
+            Slot6BorderSelected.SetActive(true);
         }
     }
 
-    public static void setItemSelect(int quantidade){
-        ItemSelect = quantidade;
+    public static void setItemSelect(int valor){
+        ItemSelect = valor;
+        if(returnUltimoItemSelect() == 0){
+            setUltimoItemSelect(valor);
+        }else{
+            setDestruir(true);
+        }
     }
 
     public static int returnItemSelect(){
         return ItemSelect;
     }
 
-    void dissableBorder(){
+    public static void setUltimoItemSelect(int valor){
+        ultimoItemSelect = valor;
+    }
 
+    public static int returnUltimoItemSelect(){
+        return ultimoItemSelect;
+    }
+
+    public static void setDestruir(bool selecao){
+        destruirUltimoItemSelect = selecao;
+    }
+    
+    public static bool returnDestruir(){
+        return destruirUltimoItemSelect;
+    }
+
+
+    void dissableBorder(){
+        if(returnItemSelect() != returnUltimoItemSelect()){
+            if(returnUltimoItemSelect() == 1){
+                Slot1BorderSelected.SetActive(false);
+            }
+            else if(returnUltimoItemSelect() == 2){
+                Slot2BorderSelected.SetActive(false);
+            }
+            else if(returnUltimoItemSelect() == 3){
+                Slot3BorderSelected.SetActive(false);
+            }
+            else if(returnUltimoItemSelect() == 4){
+                Slot4BorderSelected.SetActive(false);
+            }
+            else if(returnUltimoItemSelect() == 5){
+                Slot5BorderSelected.SetActive(false);
+            }
+            else if(returnUltimoItemSelect() == 6){
+                Slot6BorderSelected.SetActive(false);
+            }
+            setUltimoItemSelect(returnItemSelect());
+        }
     }
 }

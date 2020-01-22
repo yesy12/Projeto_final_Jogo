@@ -13,7 +13,7 @@ public class pickObject : MonoBehaviour{
     public ArmorSetDurability ObjetoArmorSetDurability;
 
     void FixedUpdate(){
-        // removerItem();
+        removerItem();
     }
 
     void OnTriggerEnter(Collider other) {
@@ -21,7 +21,7 @@ public class pickObject : MonoBehaviour{
 
         if(select == "espada" || select == "machado"){
             objeto = other.gameObject;
-            
+
             getComponent();
             setMessagePanelInfo(select);
         }
@@ -33,11 +33,14 @@ public class pickObject : MonoBehaviour{
             //AmorSetDurability
             var durabilidade = ObjetoArmorSetDurability.returnDurability();
             var dano = ObjetoArmorSetDurability.returnDano();
+            var level = ObjetoArmorSetDurability.returnLevel();
 
             //Hud
             HudArmaTrue.setArmaString(select);
             HudArmaTrue.setArmaSwitchBool(true);
             HudArmaTrue.setArmaDurabilidade_Arma1_Arma2(durabilidade);
+            HudArmaTrue.setArmaLevel_Arma1_Arma2(level);
+            HudArmaTrue.setArmaDano_Arma1_Arma2(dano);
             HudArmaTrue.setDano(dano);
 
             //Personagem

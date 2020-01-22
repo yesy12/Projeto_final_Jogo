@@ -53,12 +53,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Battle\EnemyAttackOntriggerEnterOnPlayer.cs" />
      <Compile Include="Assets\Scripts\Battle\EnemyMovement.cs" />
      <Compile Include="Assets\Scripts\Battle\PlayerAttack.cs" />
      <Compile Include="Assets\Scripts\Hud\Geral\BorderSelected.cs" />
      <Compile Include="Assets\Scripts\Hud\Geral\ButtonInventario.cs" />
      <Compile Include="Assets\Scripts\Hud\Geral\FaltaDeRecurso.cs" />
      <Compile Include="Assets\Scripts\Hud\Geral\HudArmaTrue.cs" />
+     <Compile Include="Assets\Scripts\Hud\Geral\HudBarPanel.cs" />
      <Compile Include="Assets\Scripts\Hud\Geral\InventarioHud.cs" />
      <Compile Include="Assets\Scripts\Hud\Geral\MessagePanel.cs" />
      <Compile Include="Assets\Scripts\Hud\Geral\texto.cs" />
@@ -70,6 +72,7 @@
      <Compile Include="Assets\Scripts\Hud\Text\StaminaText.cs" />
      <Compile Include="Assets\Scripts\Hud\Text\XPText.cs" />
      <Compile Include="Assets\Scripts\Objects\ArmorSetDurability.cs" />
+     <Compile Include="Assets\Scripts\Objects\ButtonInfoSlot.cs" />
      <Compile Include="Assets\Scripts\Objects\CastingToObject.cs" />
      <Compile Include="Assets\Scripts\Objects\Item.cs" />
      <Compile Include="Assets\Scripts\Objects\ItemArray.cs" />
