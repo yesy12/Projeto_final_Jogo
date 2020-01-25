@@ -32,12 +32,12 @@ public class personagem : MonoBehaviour{
 
     void Update(){
         movimentacaoPerson();
-        controlesGerais();   
+        controlesGerais();  
+        Click_mouse(); 
     }
 
     void FixedUpdate(){
         ControlesHudBar();
-        Click_mouse();
         //verificarDano();
     }
 
@@ -217,6 +217,13 @@ public class personagem : MonoBehaviour{
      
     }
 
+    public static bool ClicouMouse = false;
+
+                // else if(returnArmaSelecionada() == "arma2"){
+                //     ClicouMouse = true;
+                //     HudArmaTrue.setDiminuirArma2DurabilidadeAtual(1);
+                // }
+
     void Click_mouse(){
         var arma1Bool = HudArmaTrue.returnArma1Bool();
         var arma2Bool = HudArmaTrue.returnArma2Bool();
@@ -224,12 +231,17 @@ public class personagem : MonoBehaviour{
         if(arma1Bool == true ||  arma2Bool == true){
             if(Input.GetMouseButtonDown(0)){
                 if(returnArmaSelecionada() == "arma1"){
+                    ClicouMouse = true;
                     HudArmaTrue.setDiminuirArma1DurabilidadeAtual(1);
                 }
-                else if(returnArmaSelecionada() == "arma2"){
-                    HudArmaTrue.setDiminuirArma2DurabilidadeAtual(1);
-                }
             }
+            if(Input.GetMouseButtonUp(0)){
+                ClicouMouse = false;
+            }
+        }
+        else{
+            ClicouMouse = false;
+            return ;
         }
     }
 

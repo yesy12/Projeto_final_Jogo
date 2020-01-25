@@ -12,6 +12,8 @@ public class pickObject : MonoBehaviour{
 
     public ArmorSetDurability ObjetoArmorSetDurability;
 
+    public bool entrouNaArma;
+
     void FixedUpdate(){
         removerItem();
     }
@@ -22,13 +24,14 @@ public class pickObject : MonoBehaviour{
         if(select == "espada" || select == "machado"){
             objeto = other.gameObject;
 
+            setEntrouNaArma(true);
             getComponent();
             setMessagePanelInfo(select);
         }
     }
 
     void removerItem(){
-        if(personagem.getApertouE() == true){
+        if(personagem.getApertouE() == true && returnEntrouArma() == true){
             
             //AmorSetDurability
             var durabilidade = ObjetoArmorSetDurability.returnDurability();
@@ -50,6 +53,7 @@ public class pickObject : MonoBehaviour{
             MessagePanel.SetItensTrueOrFalse(false);
             ItemArray.RemoverItem(objeto);
             Destroy(objeto);
+            setEntrouNaArma(false);
         }
     }
 
@@ -78,5 +82,14 @@ public class pickObject : MonoBehaviour{
         dano += ObjetoArmorSetDurability.returnDano();
         MessagePanel.setDanoValor(dano);
     }
+
+    public void setEntrouNaArma(bool selecao){
+        entrouNaArma = selecao;
+    }
+
+    public bool returnEntrouArma(){
+        return entrouNaArma;
+    }
+
 
 }
