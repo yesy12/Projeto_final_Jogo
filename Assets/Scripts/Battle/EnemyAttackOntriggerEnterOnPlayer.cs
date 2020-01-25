@@ -7,11 +7,8 @@ public class EnemyAttackOntriggerEnterOnPlayer : MonoBehaviour{
     void  OnTriggerEnter(Collider collider) {
         var select = collider.tag;
 
-        if(select == "inimigo"){
+        if(select == "personagem"){
             print(true);
-        }else{
-            print(false);
         }
-    
     }
 }
