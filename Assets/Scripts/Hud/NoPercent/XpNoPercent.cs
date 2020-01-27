@@ -12,18 +12,24 @@ public class XpNoPercent : MonoBehaviour{
 
     void Awake(){
         setNivelAtual(1);
+        XPText.setXpPercentual("0");
     }
 
     void Update(){
-        xpPorNivel();
         passarXpTexto();
+        xpPorNivel();
         passarNivel();
         MostrarXp();
     }
-    
+
     static void passarXpTexto(){
         if(returnMostrarXpBool() == false){
-            XPText.setXpPercentual( (returnXpAtual()/returnXpMaximo()*100).ToString("F0") );
+            if(returnXpAtual() > 0){
+                XPText.setXpPercentual( (returnXpAtual()/returnXpMaximo()*100).ToString("F0") );
+            }
+            else{
+                XPText.setXpPercentual( "0");
+            }
         }
     }
   
@@ -90,14 +96,124 @@ public class XpNoPercent : MonoBehaviour{
         else if(returnNivelAtual() == 16){
             setXpMaximo(1600);
         }
+        return ;
     }
-    
+
+    static void aumentarDanoStaminaLife(){
+        var dano1 = personagem.returnDanoArma1Personagem();
+        var dano2 = personagem.returnDanoArma2Personagem();
+        var staminaAtual = StaminaNoPercent.returnStaminaAtual();
+        var staminaMaximo = StaminaNoPercent.returnStaminaMaximo();
+        var lifeAtual = LifeNoPercent.returnLifeAtual();
+        var lifeMaximo = LifeNoPercent.returnLifeMaximo();
+        var danoMais = 0;
+        var staminaMais = 0;
+        var lifeMais = 0;
+
+        if(returnNivelAtual() == 2){
+            danoMais = 1;
+            staminaMais = 10;
+            lifeMais = 10;
+        }
+        else if(returnNivelAtual() == 3){
+            danoMais = 2;
+            staminaMais = 20;
+            lifeMais = 20;
+        }
+        else if(returnNivelAtual() == 4){
+            danoMais = 3;
+            staminaMais = 30;
+            lifeMais = 30;
+        }
+        else if(returnNivelAtual() == 5){
+            danoMais = 1;
+            staminaMais = 40;
+            lifeMais = 40;
+        }
+        else if(returnNivelAtual() == 6){
+            danoMais = 2;
+            staminaMais = 50;
+            lifeMais = 50;
+        }
+        else if(returnNivelAtual() == 7){
+            danoMais = 3;
+            staminaMais = 60;
+            lifeMais = 60;
+        }
+        else if(returnNivelAtual() == 8){
+            danoMais = 1;
+            staminaMais = 70;
+            lifeMais = 70;
+        }
+        else if(returnNivelAtual() == 9){
+            danoMais = 2;
+            staminaMais = 80;
+            lifeMais = 80;
+        }
+        else if(returnNivelAtual() == 10){
+            danoMais = 3;
+            staminaMais = 90;
+            lifeMais = 90;
+        }
+        else if(returnNivelAtual() == 11){
+            danoMais = 1;
+            staminaMais = 100;
+            lifeMais = 100;
+        }
+        else if(returnNivelAtual() == 12){
+            danoMais = 2;
+            staminaMais = 110;
+            lifeMais = 110;
+        }
+        else if(returnNivelAtual() == 13){
+            danoMais = 3;
+            staminaMais = 120;
+            lifeMais = 120;
+        }
+        else if(returnNivelAtual() == 14){
+            danoMais = 1;
+            staminaMais = 130;
+            lifeMais = 130;
+        }
+        else if(returnNivelAtual() == 15){
+            danoMais = 2;
+            staminaMais = 140;
+            lifeMais = 140;
+        }
+        else if(returnNivelAtual() == 16){
+            danoMais = 3;
+            staminaMais = 150;
+            lifeMais = 150;
+        }
+
+        personagem.setDanoArma1Personagem(dano1 + danoMais);
+        personagem.setDanoArma1Personagem(dano2 + danoMais);
+
+        StaminaNoPercent.setStaminaAtual((int)staminaAtual + staminaMais);
+        StaminaNoPercent.setStaminaMaximo((int)staminaMaximo + staminaMais);
+
+        LifeNoPercent.setVidaAtual((int)lifeAtual + lifeMais);
+        LifeNoPercent.setVidaMaximo((int)lifeMaximo + lifeMais);
+    }
+
     void passarNivel(){
-        if(returnXpAtual() >= returnXpMaximo()){
-            NivelText.somaNivelTextNum(1);
-            XPText.setXpPercentual("0");
-            setXpAtual(0);
-            somaNivelAtual(1);
+        if(returnXpAtual() > returnXpMaximo()){
+            
+            while (returnXpAtual() > 0){
+                xpPorNivel();
+                
+                if(returnXpAtual() > returnXpMaximo()){
+                    setXpAtual((int)returnXpAtual() - (int)returnXpMaximo());
+                    somaNivelAtual(1);
+                    NivelText.somaNivelTextNum(1);
+                    XPText.setXpPercentual(returnXpAtual().ToString());
+                    aumentarDanoStaminaLife();
+                }
+                else{
+                    break;
+                }
+            }
+
         }
     }
 

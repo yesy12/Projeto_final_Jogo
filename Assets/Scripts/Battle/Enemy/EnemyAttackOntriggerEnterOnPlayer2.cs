@@ -8,14 +8,22 @@ public class EnemyAttackOntriggerEnterOnPlayer2 : MonoBehaviour{
     public bool entrouInimigoOnTriggerEnter;
     public int time;
 
+    public EnemyDrop enemyDrop;
+    public int quantidadeDeXp;
+
     void Awake(){
-        setVidaIni(100);
+        setVidaIni(1);
+        getEnemyDropInfo();
+    }
+
+    public void getEnemyDropInfo(){
+        enemyDrop = this.GetComponent<EnemyDrop>();
+        quantidadeDeXp = enemyDrop.quantidadeDeXp;
     }
 
     void Update(){
         verificarDano();
     }
-
 
     void OnTriggerEnter(Collider collider){
         var select = collider.tag;
@@ -67,6 +75,7 @@ public class EnemyAttackOntriggerEnterOnPlayer2 : MonoBehaviour{
 
     void verificarVidaIni(bool selecao=false){
         if(returnVidaIni() <= 0 || selecao == true){
+            XpNoPercent.somaXp(quantidadeDeXp);
             setInimigoLifeIntOnEnemy(0);
             Destroy(this.gameObject);
         }

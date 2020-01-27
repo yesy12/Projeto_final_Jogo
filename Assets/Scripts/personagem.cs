@@ -190,6 +190,7 @@ public class personagem : MonoBehaviour{
             if(Input.GetMouseButtonDown(0)){
                 if(returnArmaSelecionada() == "arma1"){
                     setClicouMouse(true);
+                    StaminaNoPercent.tirarStamina(1);
                     HudArmaTrue.setDiminuirArma1DurabilidadeAtual(1);
                 }
             }

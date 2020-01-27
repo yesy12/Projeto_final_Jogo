@@ -278,6 +278,7 @@ GameObject:
   - component: {fileID: 115482697}
   - component: {fileID: 115482702}
   - component: {fileID: 115482701}
+  - component: {fileID: 115482703}
   m_Layer: 0
   m_Name: inimigo
   m_TagString: inimigo
@@ -372,6 +373,8 @@ MonoBehaviour:
   vidaInimigo: 0
   entrouInimigoOnTriggerEnter: 0
   time: 0
+  enemyDrop: {fileID: 0}
+  quantidadeDeXp: 0
 --- !u!54 &115482702
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -388,6 +391,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &115482703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115482696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff17abe5bd0486242be6580a80f51492, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quantidadeDeXp: 1000
 --- !u!1001 &124001425
 PrefabInstance:
   m_ObjectHideFlags: 0

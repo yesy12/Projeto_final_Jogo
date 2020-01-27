@@ -22,11 +22,11 @@ public class XPText : MonoBehaviour{
     }
 
     void setTextoGlobal(string texto){
-        if(LifeNoPercent.returnMostrarVidaBool()){
+        if(XpNoPercent.returnMostrarXpBool() == true){
             textoGlobal = texto;
         }
         else{
-            textoGlobal = returnXpPercentual() + "%/100%";
+            textoGlobal = texto + "%/100%";
         }
     }
 
