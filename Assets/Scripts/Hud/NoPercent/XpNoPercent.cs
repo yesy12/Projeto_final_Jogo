@@ -18,6 +18,7 @@ public class XpNoPercent : MonoBehaviour{
         xpPorNivel();
         passarXpTexto();
         passarNivel();
+        MostrarXp();
     }
     
     static void passarXpTexto(){

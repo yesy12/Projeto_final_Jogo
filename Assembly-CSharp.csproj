@@ -53,8 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Battle\EnemyAttackOntriggerEnterOnPlayer.cs" />
-     <Compile Include="Assets\Scripts\Battle\EnemyMovement.cs" />
+     <Compile Include="Assets\Scripts\Battle\EnemyAttackOntriggerEnterOnPlayer2.cs" />
      <Compile Include="Assets\Scripts\Battle\PlayerAttack.cs" />
      <Compile Include="Assets\Scripts\Hud\Geral\BorderSelected.cs" />
      <Compile Include="Assets\Scripts\Hud\Geral\ButtonInventario.cs" />
@@ -67,6 +66,7 @@
      <Compile Include="Assets\Scripts\Hud\NoPercent\LifeNoPercent.cs" />
      <Compile Include="Assets\Scripts\Hud\NoPercent\StaminaNoPercent.cs" />
      <Compile Include="Assets\Scripts\Hud\NoPercent\XpNoPercent.cs" />
+     <Compile Include="Assets\Scripts\Hud\Text\InimigoText.cs" />
      <Compile Include="Assets\Scripts\Hud\Text\LifeText.cs" />
      <Compile Include="Assets\Scripts\Hud\Text\NivelText.cs" />
      <Compile Include="Assets\Scripts\Hud\Text\StaminaText.cs" />

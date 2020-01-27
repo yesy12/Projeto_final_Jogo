@@ -23,7 +23,7 @@ public class StaminaNoPercent : MonoBehaviour{
     void Update(){
         igualarStamina();
         passarStaminaTexto();
-        //MostraStamina();
+        MostrarStamina();
         danoStamina();
     }
 

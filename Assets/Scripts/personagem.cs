@@ -5,26 +5,26 @@ using UnityEngine;
 public class personagem : MonoBehaviour{
     float velocPerson,velocPersonRot; 
     Vector3 startPosition;
-    public static bool mostrarXP = false;
-    public static bool mostrarStamina = false;
-    public static bool mostrarVida = false;
+    public static bool mostrarXP;
+    public static bool mostrarStamina;
+    public static bool mostrarVida;
     public static int danoArma1;
     public static int danoArma2;
     private static float zeroF = 0f; 
 
     public static bool apertouE;
     public static bool apertouI;
-
     public static string armaSelecionada;
+    public static bool ClicouMouse;
 
     void Awake(){
        setApertouE(false);
        setApertouI(false);
+       setClicouMouse(false);
+       setMostrar(false);
     }
 
-
     void Start(){
-        //DestroyObjectPorDentro = gameObject.GetComponent<DestroyObjectPorDentro>();
         setVelocPerson(30f);
         setVelocPersonRot(90f);
         startPosition = transform.position;
@@ -39,35 +39,6 @@ public class personagem : MonoBehaviour{
     void FixedUpdate(){
         ControlesHudBar();
         //verificarDano();
-    }
-
-    public static void verificarDano(){
-        if(HudArmaTrue.returnArma1Bool() == true){
-            print(returnDanoArma1Personagem() + " Arma1 1");
-        }
-        if(HudArmaTrue.returnArma2Bool() == true){
-            print(returnDanoArma2Personagem() + " Arma 2");
-        }
-    }
-    
-    public void setVelocPerson(float quantidade){
-        velocPerson = quantidade;
-    }
-
-    public float getVelocPerson(){
-        return velocPerson;
-    }
-
-    public float velocPerson_timeDeltaTime(){
-        return velocPerson*Time.deltaTime;
-    }
-    
-    public float velocPersonRot_timeDeltaTime(){
-        return velocPersonRot*Time.deltaTime;
-    }
-
-    public void setVelocPersonRot(float quantidade){
-        velocPersonRot = quantidade;
     }
 
     //transform.Rotate(0f,-velocPersonRot*Time.deltaTime,0f);
@@ -106,12 +77,6 @@ public class personagem : MonoBehaviour{
             LifeNoPercent.setMostrarVidaBool(true);
             StaminaNoPercent.setMostrarStaminaBool(true);
             XpNoPercent.setMostrarXpBool(true);
-
-
-            //Situações
-            LifeNoPercent.MostrarVida();
-            StaminaNoPercent.MostrarStamina();
-            XpNoPercent.MostrarXp();
         }
         if(Input.GetKeyUp("m")){
             LifeNoPercent.setMostrarVidaBool(false);
@@ -217,13 +182,6 @@ public class personagem : MonoBehaviour{
      
     }
 
-    public static bool ClicouMouse = false;
-
-                // else if(returnArmaSelecionada() == "arma2"){
-                //     ClicouMouse = true;
-                //     HudArmaTrue.setDiminuirArma2DurabilidadeAtual(1);
-                // }
-
     void Click_mouse(){
         var arma1Bool = HudArmaTrue.returnArma1Bool();
         var arma2Bool = HudArmaTrue.returnArma2Bool();
@@ -231,16 +189,16 @@ public class personagem : MonoBehaviour{
         if(arma1Bool == true ||  arma2Bool == true){
             if(Input.GetMouseButtonDown(0)){
                 if(returnArmaSelecionada() == "arma1"){
-                    ClicouMouse = true;
+                    setClicouMouse(true);
                     HudArmaTrue.setDiminuirArma1DurabilidadeAtual(1);
                 }
             }
             if(Input.GetMouseButtonUp(0)){
-                ClicouMouse = false;
+                setClicouMouse(false);
             }
         }
         else{
-            ClicouMouse = false;
+            setClicouMouse(false);
             return ;
         }
     }
@@ -284,6 +242,49 @@ public class personagem : MonoBehaviour{
 
     public static string returnArmaSelecionada(){
         return armaSelecionada;
+    }
+
+    public static void verificarDano(){
+        if(HudArmaTrue.returnArma1Bool() == true){
+            print(returnDanoArma1Personagem() + " Arma1 1");
+        }
+        if(HudArmaTrue.returnArma2Bool() == true){
+            print(returnDanoArma2Personagem() + " Arma 2");
+        }
+    }
+    
+    public void setVelocPerson(float quantidade){
+        velocPerson = quantidade;
+    }
+
+    public float getVelocPerson(){
+        return velocPerson;
+    }
+
+    public float velocPerson_timeDeltaTime(){
+        return velocPerson*Time.deltaTime;
+    }
+    
+    public float velocPersonRot_timeDeltaTime(){
+        return velocPersonRot*Time.deltaTime;
+    }
+
+    public void setVelocPersonRot(float quantidade){
+        velocPersonRot = quantidade;
+    }
+
+    public static void setClicouMouse(bool selecao){
+        ClicouMouse = selecao;
+    }
+
+    public static bool getClicouMouse(){
+        return ClicouMouse;
+    }
+
+    public void setMostrar(bool selecao){
+        mostrarXP = selecao;
+        mostrarStamina = selecao;
+        mostrarVida = selecao;
     }
 
 }

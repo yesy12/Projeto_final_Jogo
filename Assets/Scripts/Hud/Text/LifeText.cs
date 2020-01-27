@@ -20,8 +20,9 @@ public class LifeText : MonoBehaviour{
         setTextoGlobal(returnLifePercentual());
         setLifePercentualHud(returnTextoGlobal());
     }
+
     void setTextoGlobal(string texto){
-        if(LifeNoPercent.returnMostrarVidaBool()){
+        if(LifeNoPercent.returnMostrarVidaBool() == true){
             textoGlobal = texto;
         }
         else{

@@ -6,12 +6,13 @@ public class EnemyAttackOntriggerEnterOnPlayer2 : MonoBehaviour{
     
     public int vidaInimigo;
     public bool entrouInimigoOnTriggerEnter;
+    public int time;
 
     void Awake(){
         setVidaIni(100);
     }
 
-    void FixedUpdate(){
+    void Update(){
         verificarDano();
     }
 
@@ -32,12 +33,16 @@ public class EnemyAttackOntriggerEnterOnPlayer2 : MonoBehaviour{
 
     void verificarDano(){
         if(entrouInimigoOnTriggerEnter == true){
+            // Debug.Log("Entrou if 1");
             if(personagem.ClicouMouse == true){
-                diminuirVidaIni(personagem.returnDanoArma1Personagem());
-                var vida = returnVidaIni();
-                setInimigoLifeIntOnEnemy(vida);
+                time += 1;
+                if(time == 10){
+                    diminuirVidaIni(personagem.returnDanoArma1Personagem());
+                    var vida = returnVidaIni();
+                    setInimigoLifeIntOnEnemy(vida);
+                    time = 0;
+                }
             }
-            
         }
     }
 
@@ -47,12 +52,13 @@ public class EnemyAttackOntriggerEnterOnPlayer2 : MonoBehaviour{
 
     void diminuirVidaIni(int quantidade){
         var contador = vidaInimigo - quantidade;
-        if( contador < 0 ){
+        if(contador < 0 ){
             verificarVidaIni(true);
             setInimigoLifeIntOnEnemy(0);
         }else{
             vidaInimigo -= quantidade;
         }
+        personagem.ClicouMouse = false;
     }
 
     int returnVidaIni(){

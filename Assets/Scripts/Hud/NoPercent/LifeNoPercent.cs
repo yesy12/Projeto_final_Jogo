@@ -18,6 +18,7 @@ public class LifeNoPercent : MonoBehaviour{
     }
 
     void Update(){
+        MostrarVida();
         igualarVida();
         passarVidaTexto();
         morreu();
@@ -37,7 +38,8 @@ public class LifeNoPercent : MonoBehaviour{
 
     public static void MostrarVida(){
         if(returnMostrarVidaBool() == true){
-            LifeText.setLifePercentual( returnLifeAtual().ToString() + "/" + returnLifeMaximo().ToString() );
+            var texto = returnLifeAtual().ToString() + "/" + returnLifeMaximo().ToString();
+            LifeText.setLifePercentual(texto);
         }   
     }
 
