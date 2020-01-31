@@ -29,8 +29,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 131172424914428354}
-  m_RootOrder: 4
+  m_Father: {fileID: 4950753376027251614}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -630,6 +630,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0145fea3e6cc9604894e5673ce60096f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dano1: 0
+  dano2: 0
+  danoMais: 0
+  staminaMais: 0
+  lifeMais: 0
+  staminaAtual: 0
+  staminaMaximo: 0
+  lifeAtual: 0
+  lifeMaximo: 0
 --- !u!114 &131172424640229215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -671,6 +680,9 @@ MonoBehaviour:
   Arma2Durabilidade: {fileID: 131172424824120346}
   Arma1TextDurabilidade: {fileID: 131172425121638135}
   Arma2TextDurabilidade: {fileID: 131172424461422280}
+  Arma1DurabilidadeTextPanel: {fileID: 7166314851076845785}
+  Arma2DurabilidadeTextPanel: {fileID: 1790947906203212547}
+  xpNoPercent: {fileID: 0}
 --- !u!114 &131172424640229213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1065,7 +1077,7 @@ RectTransform:
   - {fileID: 131172425322996563}
   - {fileID: 131172426480988823}
   - {fileID: 131172424824120347}
-  - {fileID: 131172424461422282}
+  - {fileID: 4950753376027251614}
   - {fileID: 131172425987733044}
   m_Father: {fileID: 131172426048853636}
   m_RootOrder: 2
@@ -1375,8 +1387,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 131172425428332477}
-  m_RootOrder: 4
+  m_Father: {fileID: 7866077158224254787}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2284,7 +2296,7 @@ RectTransform:
   - {fileID: 131172425594022197}
   - {fileID: 131172425342095610}
   - {fileID: 131172425440860372}
-  - {fileID: 131172425121638133}
+  - {fileID: 7866077158224254787}
   - {fileID: 131172425017961975}
   m_Father: {fileID: 131172426048853636}
   m_RootOrder: 1
@@ -4534,6 +4546,79 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -2}
   m_SizeDelta: {x: 300, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1790947906203212547
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4950753376027251614}
+  - component: {fileID: 5868531282653695989}
+  - component: {fileID: 3989096198377787341}
+  m_Layer: 5
+  m_Name: Arma2DurabilidadeTextBool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &4950753376027251614
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790947906203212547}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 131172424461422282}
+  m_Father: {fileID: 131172424914428354}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &5868531282653695989
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790947906203212547}
+  m_CullTransparentMesh: 0
+--- !u!114 &3989096198377787341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790947906203212547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
 --- !u!1 &1933093367025032618
 GameObject:
   m_ObjectHideFlags: 0
@@ -5269,6 +5354,79 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
+--- !u!1 &7166314851076845785
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7866077158224254787}
+  - component: {fileID: 4188367571510030840}
+  - component: {fileID: 3048516417950102722}
+  m_Layer: 5
+  m_Name: Arma1DurabilidadeTextBool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &7866077158224254787
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7166314851076845785}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 131172425121638133}
+  m_Father: {fileID: 131172425428332477}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &4188367571510030840
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7166314851076845785}
+  m_CullTransparentMesh: 0
+--- !u!114 &3048516417950102722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7166314851076845785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
 --- !u!1 &7382733414799823012
 GameObject:
   m_ObjectHideFlags: 0

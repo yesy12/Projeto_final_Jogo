@@ -186,15 +186,15 @@ public class personagem : MonoBehaviour{
     }
 
     public void diminuiDurabilidadeArma(){
-        if(returnArmaSelecionada() == "arma1"){ //&& returnDeuDanoInimigo() == true){
-            HudArmaTrue.setArmaDurabilidadeAtual("arma1",1);
-            // setDeuDanoinimigo(false);
-            // StaminaNoPercent.tirarStamina(1);
+        if(returnArmaSelecionada() == "arma1" && returnDeuDanoInimigo() == true){
+            HudArmaTrue.setDiminuirArma1DurabilidadeAtual("arma1",1);
+            setDeuDanoinimigo(false);
+            StaminaNoPercent.tirarStamina(1);
         }
-        else if(returnArmaSelecionada() == "arma2"){// && returnDeuDanoInimigo() == true){
-            HudArmaTrue.setArmaDurabilidadeAtual("arma2",1);
-            // setDeuDanoinimigo(false);
-            // StaminaNoPercent.tirarStamina(1);
+        else if(returnArmaSelecionada() == "arma2"  && returnDeuDanoInimigo() == true){
+            HudArmaTrue.setDiminuirArma1DurabilidadeAtual("arma2",1);
+            setDeuDanoinimigo(false);
+            StaminaNoPercent.tirarStamina(1);
         }
     }
 

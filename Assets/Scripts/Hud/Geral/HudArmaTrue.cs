@@ -36,6 +36,9 @@ public class HudArmaTrue : MonoBehaviour{
     public Text Arma1TextDurabilidade;
     public Text Arma2TextDurabilidade;
 
+    public GameObject Arma1DurabilidadeTextPanel;
+    public GameObject Arma2DurabilidadeTextPanel;
+
     //dano
     public static int dano;
 
@@ -90,6 +93,7 @@ public class HudArmaTrue : MonoBehaviour{
             texto = "arma2";
         }
         if(texto != ""){
+            ArmaDurabilidadeTextPanel(texto,true);
             ArmaAtiva_Desativa(texto,true);
             ArmaDurabilidadeAtiva_Desativa(texto,true);
             setArmaBool(texto,true);
@@ -104,11 +108,20 @@ public class HudArmaTrue : MonoBehaviour{
     void destoiArma(){
         var durabilidade1 = returnArmaDurabilidadeAtual("arma1");
         var durabilidade2 = returnArmaDurabilidadeAtual("arma2");
+        var texto = "";
 
-        print(durabilidade1);
         if(durabilidade1 <= 0){
-            ArmaAtiva_Desativa("arma1",false);
-            ArmaDurabilidadeAtiva_Desativa("arma1",false);
+            texto = "arma1";
+        }
+        else if(durabilidade2 <= 0){
+            texto = "arma2";
+        }
+        if(texto != ""){
+            ArmaAtiva_Desativa(texto,false);
+            ArmaDurabilidadeAtiva_Desativa(texto,false);
+            setArmaBool(texto,false);
+            setArmaDurabilidadeText(texto);
+            ArmaDurabilidadeTextPanel(texto,false);
         }
 
     }
@@ -154,6 +167,14 @@ public class HudArmaTrue : MonoBehaviour{
         }
     }    
 
+    public void ArmaDurabilidadeTextPanel(string selecaoString,bool selecaoBool){
+        if(selecaoString == "arma1"){
+            Arma1DurabilidadeTextPanel.SetActive(selecaoBool);
+        }
+        else if(selecaoString == "arma2"){
+            Arma2DurabilidadeTextPanel.SetActive(selecaoBool);
+        }
+    }
 
     //Sets
     public static void setArmaString(string texto){
