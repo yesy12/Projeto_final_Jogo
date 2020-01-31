@@ -247,16 +247,17 @@ public class personagem : MonoBehaviour{
         return apertouI;
     }
 
-    public static void setDanoArma1Personagem(int quantidade){
-        danoArma1 = quantidade;
+    public static void setDanoArmaPersonagem(string selecaoString,int quantidade){
+        if(selecaoString == "arma1"){
+            danoArma1 = quantidade;
+        }
+        else if(selecaoString == "arma2"){
+            danoArma2 = quantidade;
+        }       
     }
 
     public static int returnDanoArma1Personagem(){
         return danoArma1;
-    }
-
-    public static void setDanoArma2Personagem(int quantidade){
-        danoArma2 = quantidade;
     }
 
     public static int returnDanoArma2Personagem(){

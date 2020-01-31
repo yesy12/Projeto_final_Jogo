@@ -80,21 +80,24 @@ public class HudArmaTrue : MonoBehaviour{
     void selecaoArma(){
         var dano = returnDano();
         var danoMaisXpNoPercent = xpNoPercent.danoMais;
+        var texto = "";
+        var danoSomado = dano + danoMaisXpNoPercent;
 
         if(returnArmaBool("arma1") == false){
-            ArmaAtiva_Desativa("arma1",true);
-            ArmaDurabilidadeAtiva_Desativa("arma1",true);
-            setArmaBool("arma1",true);
-            setArmaDurabilidadeText("arma1");
-            personagem.setDanoArma1Personagem(dano + danoMaisXpNoPercent);        
+            texto = "arma1";
         }
         else if(returnArmaBool("arma2") == false){
-            ArmaAtiva_Desativa("arma2",true);
-            ArmaDurabilidadeAtiva_Desativa("arma2",true);
-            setArmaBool("arma2",true);
-            setArmaDurabilidadeText("arma2");
-            personagem.setDanoArma2Personagem(dano + danoMaisXpNoPercent);   
+            texto = "arma2";
         }
+        if(texto != ""){
+            ArmaAtiva_Desativa(texto,true);
+            ArmaDurabilidadeAtiva_Desativa(texto,true);
+            setArmaBool(texto,true);
+            setArmaDurabilidadeText(texto);
+            personagem.setDanoArma1Personagem(texto,danoSomado);        
+        
+        }
+
     }
 
 
@@ -102,6 +105,7 @@ public class HudArmaTrue : MonoBehaviour{
         var durabilidade1 = returnArmaDurabilidadeAtual("arma1");
         var durabilidade2 = returnArmaDurabilidadeAtual("arma2");
 
+        print(durabilidade1);
         if(durabilidade1 <= 0){
             ArmaAtiva_Desativa("arma1",false);
             ArmaDurabilidadeAtiva_Desativa("arma1",false);
