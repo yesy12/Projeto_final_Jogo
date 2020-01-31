@@ -111,13 +111,18 @@ public class XpNoPercent : MonoBehaviour{
     }
 
     void aumentarDanoStaminaLife(){
+        var texto1 = "arma1";
+        var texto2 = "arma2";
+
+        var danoSomado1 = dano1 + danoMais;
+        var danoSomado2 = dano2 + danoMais;
 
         incrementoPorNivel();
-        personagem.setDanoArma1Personagem(dano1 + danoMais);
-        personagem.setDanoArma2Personagem(dano2 + danoMais);
+        personagem.setDanoArmaPersonagem(texto1,danoSomado1);
+        personagem.setDanoArmaPersonagem(texto2,danoSomado2);
 
-        HudArmaTrue.setArmaDano("arma1",dano1 + danoMais);
-        HudArmaTrue.setArmaDano("arma2",dano2 + danoMais);
+        HudArmaTrue.setArmaDano(texto1,danoSomado1);
+        HudArmaTrue.setArmaDano(texto2,danoSomado2);
 
         StaminaNoPercent.setStaminaAtual((int)staminaAtual + staminaMais);
         StaminaNoPercent.setStaminaMaximo((int)staminaMaximo + staminaMais);

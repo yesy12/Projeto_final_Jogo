@@ -94,7 +94,7 @@ public class HudArmaTrue : MonoBehaviour{
             ArmaDurabilidadeAtiva_Desativa(texto,true);
             setArmaBool(texto,true);
             setArmaDurabilidadeText(texto);
-            personagem.setDanoArma1Personagem(texto,danoSomado);        
+            personagem.setDanoArmaPersonagem(texto,danoSomado);        
         
         }
 
