@@ -12,7 +12,7 @@ public class EnemyAttackOntriggerEnterOnPlayer2 : MonoBehaviour{
     public int quantidadeDeXp;
 
     void Awake(){
-        setVidaIni(1);
+        setVidaIni(100);
         getEnemyDropInfo();
     }
 
@@ -45,7 +45,15 @@ public class EnemyAttackOntriggerEnterOnPlayer2 : MonoBehaviour{
             if(personagem.ClicouMouse == true){
                 time += 1;
                 if(time == 10){
-                    diminuirVidaIni(personagem.returnDanoArma1Personagem());
+                    var danoString = personagem.returnArmaSelecionada();
+                    var dano = 0;
+                    if(danoString == "arma1"){
+                        dano = personagem.returnDanoArma1Personagem();
+                    }
+                    else if(danoString == "arma2"){
+                        dano = personagem.returnDanoArma2Personagem();
+                    }
+                    diminuirVidaIni(dano);
                     var vida = returnVidaIni();
                     setInimigoLifeIntOnEnemy(vida);
                     time = 0;
@@ -63,8 +71,10 @@ public class EnemyAttackOntriggerEnterOnPlayer2 : MonoBehaviour{
         if(contador < 0 ){
             verificarVidaIni(true);
             setInimigoLifeIntOnEnemy(0);
+            personagem.setDeuDanoinimigo(true);
         }else{
             vidaInimigo -= quantidade;
+            personagem.setDeuDanoinimigo(true);
         }
         personagem.ClicouMouse = false;
     }

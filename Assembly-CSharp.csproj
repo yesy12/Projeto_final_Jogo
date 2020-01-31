@@ -57,13 +57,11 @@
      <Compile Include="Assets\Scripts\Battle\Enemy\EnemyDrop.cs" />
      <Compile Include="Assets\Scripts\Battle\PlayerAttack.cs" />
      <Compile Include="Assets\Scripts\Hud\Geral\BorderSelected.cs" />
-     <Compile Include="Assets\Scripts\Hud\Geral\ButtonInventario.cs" />
      <Compile Include="Assets\Scripts\Hud\Geral\FaltaDeRecurso.cs" />
      <Compile Include="Assets\Scripts\Hud\Geral\HudArmaTrue.cs" />
      <Compile Include="Assets\Scripts\Hud\Geral\HudBarPanel.cs" />
      <Compile Include="Assets\Scripts\Hud\Geral\InventarioHud.cs" />
      <Compile Include="Assets\Scripts\Hud\Geral\MessagePanel.cs" />
-     <Compile Include="Assets\Scripts\Hud\Geral\texto.cs" />
      <Compile Include="Assets\Scripts\Hud\NoPercent\LifeNoPercent.cs" />
      <Compile Include="Assets\Scripts\Hud\NoPercent\StaminaNoPercent.cs" />
      <Compile Include="Assets\Scripts\Hud\NoPercent\XpNoPercent.cs" />

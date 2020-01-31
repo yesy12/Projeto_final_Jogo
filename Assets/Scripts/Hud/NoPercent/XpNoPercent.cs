@@ -7,8 +7,17 @@ public class XpNoPercent : MonoBehaviour{
     public static int nivelAtual;
     public static float xpAtual;
     public static float xpMaximo;
-
     public static bool mostrarXpBool;
+
+    public int dano1;
+    public int dano2;
+    public int danoMais;
+    public int staminaMais;
+    public int lifeMais;
+    public float staminaAtual;
+    public float staminaMaximo;
+    public float lifeAtual;
+    public float lifeMaximo;
 
     void Awake(){
         setNivelAtual(1);
@@ -18,6 +27,7 @@ public class XpNoPercent : MonoBehaviour{
     void Update(){
         passarXpTexto();
         xpPorNivel();
+        pegarValor();
         passarNivel();
         MostrarXp();
     }
@@ -37,14 +47,6 @@ public class XpNoPercent : MonoBehaviour{
         if(returnMostrarXpBool() == true){
             XPText.setXpPercentual( returnXpAtual().ToString() + "/" + returnXpMaximo().ToString() ) ;
         }
-    }
-
-    public static void setMostrarXpBool(bool situacao){
-        mostrarXpBool = situacao;
-    }
-
-    public static bool returnMostrarXpBool(){
-        return mostrarXpBool;
     }
 
     static void xpPorNivel(){
@@ -99,16 +101,53 @@ public class XpNoPercent : MonoBehaviour{
         return ;
     }
 
-    static void aumentarDanoStaminaLife(){
-        var dano1 = personagem.returnDanoArma1Personagem();
-        var dano2 = personagem.returnDanoArma2Personagem();
-        var staminaAtual = StaminaNoPercent.returnStaminaAtual();
-        var staminaMaximo = StaminaNoPercent.returnStaminaMaximo();
-        var lifeAtual = LifeNoPercent.returnLifeAtual();
-        var lifeMaximo = LifeNoPercent.returnLifeMaximo();
-        var danoMais = 0;
-        var staminaMais = 0;
-        var lifeMais = 0;
+    void pegarValor(){
+        dano1 = personagem.returnDanoArma1Personagem();
+        dano2 = personagem.returnDanoArma2Personagem();
+        staminaAtual = StaminaNoPercent.returnStaminaAtual();
+        staminaMaximo = StaminaNoPercent.returnStaminaMaximo();
+        lifeAtual = LifeNoPercent.returnLifeAtual();
+        lifeMaximo = LifeNoPercent.returnLifeMaximo();
+    }
+
+    void aumentarDanoStaminaLife(){
+
+        incrementoPorNivel();
+        personagem.setDanoArma1Personagem(dano1 + danoMais);
+        personagem.setDanoArma2Personagem(dano2 + danoMais);
+
+        HudArmaTrue.setArmaDano("arma1",dano1 + danoMais);
+        HudArmaTrue.setArmaDano("arma2",dano2 + danoMais);
+
+        StaminaNoPercent.setStaminaAtual((int)staminaAtual + staminaMais);
+        StaminaNoPercent.setStaminaMaximo((int)staminaMaximo + staminaMais);
+
+        LifeNoPercent.setVidaAtual((int)lifeAtual + lifeMais);
+        LifeNoPercent.setVidaMaximo((int)lifeMaximo + lifeMais);
+    }
+
+    void passarNivel(){
+        if(returnXpAtual() > returnXpMaximo()){
+            
+            while (returnXpAtual() > 0){
+                xpPorNivel();
+                
+                if(returnXpAtual() > returnXpMaximo()){
+                    setXpAtual((int)returnXpAtual() - (int)returnXpMaximo());
+                    somaNivelAtual(1);
+                    aumentarDanoStaminaLife();
+                    NivelText.somaNivelTextNum(1);
+                    XPText.setXpPercentual(returnXpAtual().ToString());
+                }
+                else{
+                    break;
+                }
+            }
+
+        }
+    }
+
+    void incrementoPorNivel(){
 
         if(returnNivelAtual() == 2){
             danoMais = 1;
@@ -185,36 +224,6 @@ public class XpNoPercent : MonoBehaviour{
             staminaMais = 150;
             lifeMais = 150;
         }
-
-        personagem.setDanoArma1Personagem(dano1 + danoMais);
-        personagem.setDanoArma1Personagem(dano2 + danoMais);
-
-        StaminaNoPercent.setStaminaAtual((int)staminaAtual + staminaMais);
-        StaminaNoPercent.setStaminaMaximo((int)staminaMaximo + staminaMais);
-
-        LifeNoPercent.setVidaAtual((int)lifeAtual + lifeMais);
-        LifeNoPercent.setVidaMaximo((int)lifeMaximo + lifeMais);
-    }
-
-    void passarNivel(){
-        if(returnXpAtual() > returnXpMaximo()){
-            
-            while (returnXpAtual() > 0){
-                xpPorNivel();
-                
-                if(returnXpAtual() > returnXpMaximo()){
-                    setXpAtual((int)returnXpAtual() - (int)returnXpMaximo());
-                    somaNivelAtual(1);
-                    NivelText.somaNivelTextNum(1);
-                    XPText.setXpPercentual(returnXpAtual().ToString());
-                    aumentarDanoStaminaLife();
-                }
-                else{
-                    break;
-                }
-            }
-
-        }
     }
 
     public static int returnNivelAtual(){
@@ -247,5 +256,12 @@ public class XpNoPercent : MonoBehaviour{
 
     public static float returnXpMaximo(){
         return xpMaximo;
+    }
+    public static void setMostrarXpBool(bool situacao){
+        mostrarXpBool = situacao;
+    }
+
+    public static bool returnMostrarXpBool(){
+        return mostrarXpBool;
     }
 }

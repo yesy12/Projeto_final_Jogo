@@ -17,7 +17,7 @@ public class ButtonInfoSlot : MonoBehaviour{
     }
 
     public void Slot1(){
-        if(HudArmaTrue.returnArma1Bool() == true){
+        if(HudArmaTrue.returnArmaBool("arma1") == true){
             set_HudBarPanel_Temporizador(true);
             setSlot(1);
         
@@ -39,7 +39,7 @@ public class ButtonInfoSlot : MonoBehaviour{
     }
 
     public void Slot2(){
-        if(HudArmaTrue.returnArma2Bool() == true){
+        if(HudArmaTrue.returnArmaBool("arma2") == true){
             set_HudBarPanel_Temporizador(true);
             setSlot(2);
 
@@ -190,15 +190,17 @@ public class ButtonInfoSlot : MonoBehaviour{
     public string getArmaDurabilidade(){
         var durabilidadeAtual = 0;
         var durabilidadeMaxima = 0;
-
+        var texto = "";
+        
         if(getSlot() == 1){
-            durabilidadeAtual = HudArmaTrue.returnArma1DurabilidadeAtual();
-            durabilidadeMaxima = HudArmaTrue.returnArma1DurabilidadeMaxima();
+            texto = "arma1";
         }
         else if(getSlot() == 2){
-            durabilidadeAtual = HudArmaTrue.returnArma2DurabilidadeAtual();
-            durabilidadeMaxima = HudArmaTrue.returnArma2DurabilidadeMaxima();
+            texto = "arma2";
         }
+
+        durabilidadeAtual = HudArmaTrue.returnArmaDurabilidadeAtual(texto);
+        durabilidadeMaxima = HudArmaTrue.returnArmaDurabilidadeMaxima(texto);
 
         var durabilidade = durabilidadeAtual +"/" +durabilidadeMaxima;
         return durabilidade;
@@ -217,12 +219,14 @@ public class ButtonInfoSlot : MonoBehaviour{
 
     public string getArmaDano(){
         var dano = "Dano 0";
+        var texto = "";
         if(getSlot() == 1){
-            dano = "Dano " + HudArmaTrue.Arma1Dano.ToString();
+            texto = "arma1";
         }
         else if(getSlot() == 2){
-            dano = "Dano " + HudArmaTrue.Arma2Dano.ToString();
+            texto = "arma2";
         }
+        dano = "Dano " + HudArmaTrue.returnArmaDanoString(texto);
         return dano;
     }
 

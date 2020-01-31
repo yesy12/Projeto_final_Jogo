@@ -44,7 +44,7 @@ public class pickObject : MonoBehaviour{
             HudArmaTrue.setArmaDurabilidade_Arma1_Arma2(durabilidade);
             HudArmaTrue.setArmaLevel_Arma1_Arma2(level);
             HudArmaTrue.setArmaDano_Arma1_Arma2(dano);
-            HudArmaTrue.setDano(dano);
+            HudArmaTrue.setDano(dano); 
 
             //Personagem
             personagem.setApertouE(false);

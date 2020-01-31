@@ -9,7 +9,7 @@ public class InimigoText : MonoBehaviour{
     public static int InimigoLifeInt;
 
     void Update(){ 
-        var texto = returnInimigoLifeInt();
+        var texto = returnInimigoLifeInt(); 
         setInimigoLifeHud(texto);
     }
 

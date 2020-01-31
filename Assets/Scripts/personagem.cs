@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System.Diagnostics;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,6 +17,7 @@ public class personagem : MonoBehaviour{
     public static bool apertouI;
     public static string armaSelecionada;
     public static bool ClicouMouse;
+    public static bool deuDanoInimigo;
 
     void Awake(){
        setApertouE(false);
@@ -34,15 +36,12 @@ public class personagem : MonoBehaviour{
         movimentacaoPerson();
         controlesGerais();  
         Click_mouse(); 
+        diminuiDurabilidadeArma();
     }
 
     void FixedUpdate(){
         ControlesHudBar();
-        //verificarDano();
     }
-
-    //transform.Rotate(0f,-velocPersonRot*Time.deltaTime,0f);
-    //transform.Translate(0f,0f,velocPerson*Time.deltaTime);
 
     void movimentacaoPerson(){
         //x,y,z
@@ -83,6 +82,10 @@ public class personagem : MonoBehaviour{
             StaminaNoPercent.setMostrarStaminaBool(false);
             XpNoPercent.setMostrarXpBool(false);
         }
+        else if(Input.GetKey("g")){
+            //Debug.Log(444);
+            print(returnDanoArma1Personagem());
+        }
 
         else if(Input.GetKeyDown("e")){
             setApertouE(true);
@@ -106,7 +109,7 @@ public class personagem : MonoBehaviour{
            StaminaNoPercent.setStaminaAtual(1);
         }
         else if(Input.GetKeyDown("1")){
-            if(HudArmaTrue.returnArma1Bool() == true){
+            if(HudArmaTrue.returnArmaBool("arma1") == true){
                 // HudArmaTrue.setDiminuirArma1DurabilidadeAtual(1);
                 setArmaSelecionada("arma1");
             }
@@ -119,7 +122,7 @@ public class personagem : MonoBehaviour{
             BorderSelected.setItemSelect(1);
         }
         else if(Input.GetKeyDown("2")){
-            if(HudArmaTrue.returnArma2Bool() == true){
+            if(HudArmaTrue.returnArmaBool("arma2") == true){
                 setArmaSelecionada("arma2");
             }
             else{
@@ -182,16 +185,31 @@ public class personagem : MonoBehaviour{
      
     }
 
+    public void diminuiDurabilidadeArma(){
+        if(returnArmaSelecionada() == "arma1"){ //&& returnDeuDanoInimigo() == true){
+            HudArmaTrue.setArmaDurabilidadeAtual("arma1",1);
+            // setDeuDanoinimigo(false);
+            // StaminaNoPercent.tirarStamina(1);
+        }
+        else if(returnArmaSelecionada() == "arma2"){// && returnDeuDanoInimigo() == true){
+            HudArmaTrue.setArmaDurabilidadeAtual("arma2",1);
+            // setDeuDanoinimigo(false);
+            // StaminaNoPercent.tirarStamina(1);
+        }
+    }
+
+
     void Click_mouse(){
-        var arma1Bool = HudArmaTrue.returnArma1Bool();
-        var arma2Bool = HudArmaTrue.returnArma2Bool();
+        var arma1Bool = HudArmaTrue.returnArmaBool("arma1");
+        var arma2Bool = HudArmaTrue.returnArmaBool("arma2");
 
         if(arma1Bool == true ||  arma2Bool == true){
             if(Input.GetMouseButtonDown(0)){
                 if(returnArmaSelecionada() == "arma1"){
                     setClicouMouse(true);
-                    StaminaNoPercent.tirarStamina(1);
-                    HudArmaTrue.setDiminuirArma1DurabilidadeAtual(1);
+                }
+                else if(returnArmaSelecionada() == "arma2"){
+                    setClicouMouse(true);
                 }
             }
             if(Input.GetMouseButtonUp(0)){
@@ -204,6 +222,14 @@ public class personagem : MonoBehaviour{
         }
     }
 
+    
+    public static void setDeuDanoinimigo(bool selecao){
+        deuDanoInimigo = selecao;
+    }
+
+    public static bool returnDeuDanoInimigo(){
+        return deuDanoInimigo;
+    }
 
     public static void setApertouE(bool selecao){
         apertouE = selecao;
@@ -243,15 +269,6 @@ public class personagem : MonoBehaviour{
 
     public static string returnArmaSelecionada(){
         return armaSelecionada;
-    }
-
-    public static void verificarDano(){
-        if(HudArmaTrue.returnArma1Bool() == true){
-            print(returnDanoArma1Personagem() + " Arma1 1");
-        }
-        if(HudArmaTrue.returnArma2Bool() == true){
-            print(returnDanoArma2Personagem() + " Arma 2");
-        }
     }
     
     public void setVelocPerson(float quantidade){
