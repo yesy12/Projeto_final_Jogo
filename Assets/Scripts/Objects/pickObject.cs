@@ -14,6 +14,9 @@ public class pickObject : MonoBehaviour{
 
     public bool entrouNaArma;
 
+    public bool arma1;
+    public bool arma2;
+
     void FixedUpdate(){
         removerItem();
     }
@@ -21,12 +24,22 @@ public class pickObject : MonoBehaviour{
     void OnTriggerEnter(Collider other) {
         select = other.tag;
 
+        arma1 = HudArmaTrue.returnArmaBool("arma1");
+        arma2 = HudArmaTrue.returnArmaBool("arma2");
+
         if(select == "espada" || select == "machado"){
             objeto = other.gameObject;
 
-            setEntrouNaArma(true);
-            getComponent();
-            setMessagePanelInfo(select);
+            if(arma1 == false){// || arma2 == false
+                setEntrouNaArma(true);
+                getComponent();
+                setMessagePanelInfo(select);
+                HudArmaTrue.returnArmaBool("arma1");
+            }
+            else{
+                
+            }
+
         }
     }
 

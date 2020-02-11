@@ -15,7 +15,6 @@ public class MessagePanel : MonoBehaviour{
     public static bool descricaoItemTrue;
 
 
-
     public GameObject durabilidadePanelItem;
     public Text durabilidadePanelText;
     public static string durabilidade;
@@ -37,10 +36,6 @@ public class MessagePanel : MonoBehaviour{
 
     void Awake(){
         SetItensTrueOrFalse(false);
-        // setDescricaoValor("espada");
-        // setDurabilidadeValor("Durabilidade 100/100");
-        // setNivelValor("Nivel 5");
-        // setDanoValor("Dano 7");
     }
 
     void FixedUpdate(){
@@ -76,104 +71,53 @@ public class MessagePanel : MonoBehaviour{
     */
 
     public void verificarMessageTrue(){
-        if(returnMessageItemTrue() == true){
-            OpenMessagePanel();
-        }
-        else{
-            CloseMessagePanel();
-        }
+        var selecao = returnMessageItemTrue();
+        Open_Close_MessagePanel(selecao);
     }
 
     public void verificarDescricaoItemTrue(){
-        if(returnDescricaoTrue() == true){
-            OpenDescricaoPanel();
-        }
-        else{
-            CloseDescricaoPanel();
-        }
+        var selecao = returnDescricaoTrue();
+        Open_CloseDescricaoPanel(selecao);
     }
         
     public void verificarDurabilidadeItemTrue(){
-        if(returnDurabilidadeTrue() == true){
-            OpenDurabilidadePanel();
-        }
-        else{
-            CloseDurabilidadePanel();
-        }
+        var selecao = returnDurabilidadeTrue();
+        Open_CloseDurabilidadePanel(selecao);
     }
 
     public void verificarNivelItemTrue(){
-        if(returnMessageItemTrue() == true){
-            OpenNivelPanel();
-        }
-        else{
-            CloseNivelPanel();
-        }
+        var selecao = returnNivelTrue();
+        Open_CloseNivelPanel(selecao);
     }
 
     public void verificarDanoItemTrue(){
-        if(returnDanoTrue() == true){
-            OpenDanoPanel();
-        }
-        else{
-            CloseDanoPanel();
-        }
+        var selecao = returnDanoTrue();
+        Open_CloseDanoPanel(selecao);
     }
 
     /*
         Abre na tela as opções com descrições
     */
 
-    public void OpenMessagePanel(){
-        messagePanelItem.SetActive(true);
+    public void Open_Close_MessagePanel(bool selecao){
+        messagePanelItem.SetActive(selecao);
     }
 
-    public void OpenDescricaoPanel(){
-        descricaoPanelItem.SetActive(true);
+    public void Open_CloseDescricaoPanel(bool selecao){
+        descricaoPanelItem.SetActive(selecao);
     }
 
-    public void OpenDurabilidadePanel(){
-        durabilidadePanelItem.SetActive(true);
+    public void Open_CloseDurabilidadePanel(bool selecao){
+        durabilidadePanelItem.SetActive(selecao);
     }
 
-    public void OpenNivelPanel(){
+    public void Open_CloseNivelPanel(bool selecao){
         nivelPanelItem.SetActive(true);
     }
 
-    public void OpenDanoPanel(){
-        dano_curaPanelItem.SetActive(true);
+    public void Open_CloseDanoPanel(bool selecao){
+        dano_curaPanelItem.SetActive(selecao);
     }
-
-
-    /*
-        Fecha na tela as opções com descrições
-    */
-
-
-    public void CloseMessagePanel(){
-        messagePanelItem.SetActive(false);
-    }
-
-    public void CloseDescricaoPanel(){
-        descricaoPanelItem.SetActive(false);
-    }
-
-    public void CloseDurabilidadePanel(){
-        durabilidadePanelItem.SetActive(false);
-    }
-
-    public void CloseNivelPanel(){
-        nivelPanelItem.SetActive(false);
-    }       
-
-    public void CloseDanoPanel(){
-        dano_curaPanelItem.SetActive(false);
-    }       
-
-    /*
-
-     Se esta aberto ou não
-    */
 
 
     public static void setMessageItemTrue(bool selecao){
