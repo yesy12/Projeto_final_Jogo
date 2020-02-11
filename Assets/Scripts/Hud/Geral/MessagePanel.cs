@@ -34,8 +34,18 @@ public class MessagePanel : MonoBehaviour{
     public static bool dano_curaItemTrue;   
 
 
+    public GameObject PanelTroca_de_Itens;
+    public static bool TrocaItensTrue;
+
+
+    public GameObject PanelConfirmacaoItem;
+    public static bool PanelConfirmacaoItemTrue;
+
+
     void Awake(){
         SetItensTrueOrFalse(false);
+        // Open_ClosePanelTroca_de_Itens(true);
+        
     }
 
     void FixedUpdate(){
@@ -49,6 +59,7 @@ public class MessagePanel : MonoBehaviour{
         setDurabilidadeTrue(selecao);
         setNivelTrue(selecao);
         setDanoTrue(selecao);
+        setTroca_de_ItensTrue(selecao);
     }
 
     public void ItensTrues(){
@@ -57,6 +68,7 @@ public class MessagePanel : MonoBehaviour{
         verificarDurabilidadeItemTrue();
         verificarNivelItemTrue();
         verificarDanoItemTrue();
+        verificarTrocaItensTrue();
     }
 
     public void ValoresNoHud(){
@@ -95,6 +107,15 @@ public class MessagePanel : MonoBehaviour{
         Open_CloseDanoPanel(selecao);
     }
 
+    public void verificarTrocaItensTrue(){
+        var selecao = returnTrocaItensTrue();
+        Open_ClosePanelTroca_de_Itens(selecao);
+    }
+
+    public void verificarConfirmacaoItensTrue(){
+        var selecao = returnTrocaItensTrue();
+        Open_ClosePanelTroca_de_Itens(selecao);
+    }
     /*
         Abre na tela as opções com descrições
     */
@@ -119,6 +140,15 @@ public class MessagePanel : MonoBehaviour{
         dano_curaPanelItem.SetActive(selecao);
     }
 
+    public void Open_ClosePanelTroca_de_Itens(bool selecao){
+        PanelTroca_de_Itens.SetActive(selecao);
+    }
+
+    
+    public void Open_ClosePanelConfirmacaoItem(bool selecao){
+        PanelConfirmacaoItem.SetActive(selecao);
+    }
+
 
     public static void setMessageItemTrue(bool selecao){
         messageItemTrue = selecao;
@@ -138,6 +168,10 @@ public class MessagePanel : MonoBehaviour{
 
     public static void setDanoTrue(bool selecao){
         dano_curaItemTrue = selecao;
+    }
+
+    public static void setTroca_de_ItensTrue(bool selecao){
+        TrocaItensTrue = selecao;
     }
 
 
@@ -225,6 +259,10 @@ public class MessagePanel : MonoBehaviour{
 
     public bool returnDanoTrue(){
         return dano_curaItemTrue;
+    }
+
+    public bool returnTrocaItensTrue(){
+        return TrocaItensTrue;
     }
 
 }

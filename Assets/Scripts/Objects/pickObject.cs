@@ -37,7 +37,7 @@ public class pickObject : MonoBehaviour{
                 HudArmaTrue.returnArmaBool("arma1");
             }
             else{
-                
+                MessagePanel.setTroca_de_ItensTrue(true);   
             }
 
         }
@@ -64,6 +64,7 @@ public class pickObject : MonoBehaviour{
 
             //Geral
             MessagePanel.SetItensTrueOrFalse(false);
+            MessagePanel.setTroca_de_ItensTrue(false);
             ItemArray.RemoverItem(objeto);
             Destroy(objeto);
             setEntrouNaArma(false);
@@ -72,6 +73,7 @@ public class pickObject : MonoBehaviour{
 
     void OnTriggerExit(Collider other) {
         MessagePanel.SetItensTrueOrFalse(false);
+        MessagePanel.setTroca_de_ItensTrue(false);
     }
 
     void getComponent(){
