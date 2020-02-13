@@ -68,7 +68,7 @@ public class MessagePanel : MonoBehaviour{
 
         if(timeFrameAtual == timeFrameQuantidade){
             tempoSeg += 1;
-            timeFrameQuantidade = 0;
+            timeFrameAtual = 0;
         }
     }
     public void resetTempo(){
@@ -165,7 +165,7 @@ public class MessagePanel : MonoBehaviour{
     }
 
     public void Open_ClosePanelTroca_de_Itens(bool selecao){
-        if(tempoSeg == 5){
+        if(tempoSeg == 5 &&  pickObject.returnEntrouArma() == false){
             PanelTroca_de_Itens.SetActive(false);
         }
         else{

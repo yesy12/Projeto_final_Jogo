@@ -12,14 +12,10 @@ public class pickObject : MonoBehaviour{
 
     public ArmorSetDurability ObjetoArmorSetDurability;
 
-    public bool entrouNaArma;
+    public static bool entrouNaArma;
 
     public bool arma1;
     public bool arma2;
-
-    void Update(){
-
-    }
 
     void FixedUpdate(){
         removerItem();
@@ -40,6 +36,7 @@ public class pickObject : MonoBehaviour{
             setArmasBool();
             getComponent();
             setMessagePanelInfo(select);
+            setEntrouNaArma(true);
 
             if(arma1 == false || arma2 == false){
                 setEntrouNaArma(true);
@@ -52,7 +49,7 @@ public class pickObject : MonoBehaviour{
     }
 
     void removerItem(){
-        if(personagem.getApertouE() == true && returnEntrouArma() == true){
+        if(personagem.getApertouE() == true && returnEntrouArma() == true ){
             
             //AmorSetDurability
             var durabilidade = ObjetoArmorSetDurability.returnDurability();
@@ -105,11 +102,11 @@ public class pickObject : MonoBehaviour{
         MessagePanel.setDanoValor(dano);
     }
 
-    public void setEntrouNaArma(bool selecao){
+    public static void setEntrouNaArma(bool selecao){
         entrouNaArma = selecao;
     }
 
-    public bool returnEntrouArma(){
+    public static bool returnEntrouArma(){
         return entrouNaArma;
     }
 
