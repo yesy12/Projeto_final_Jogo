@@ -17,29 +17,37 @@ public class pickObject : MonoBehaviour{
     public bool arma1;
     public bool arma2;
 
+    void Update(){
+
+    }
+
     void FixedUpdate(){
         removerItem();
     }
 
-    void OnTriggerEnter(Collider other) {
-        select = other.tag;
-
+    void setArmasBool(){
         arma1 = HudArmaTrue.returnArmaBool("arma1");
         arma2 = HudArmaTrue.returnArmaBool("arma2");
+    }
+
+
+    void OnTriggerEnter(Collider other) {
+        select = other.tag;
 
         if(select == "espada" || select == "machado"){
             objeto = other.gameObject;
 
-            if(arma1 == false){// || arma2 == false
-                setEntrouNaArma(true);
-                getComponent();
-                setMessagePanelInfo(select);
-                HudArmaTrue.returnArmaBool("arma1");
-            }
-            else{
-                MessagePanel.setTroca_de_ItensTrue(true);   
-            }
+            setArmasBool();
+            getComponent();
+            setMessagePanelInfo(select);
 
+            if(arma1 == false || arma2 == false){
+                setEntrouNaArma(true);
+            }
+            else if(arma1 == true && arma2 == true){
+                MessagePanel.setTroca_de_ItensTrue(true);
+            }
+            
         }
     }
 
@@ -73,7 +81,6 @@ public class pickObject : MonoBehaviour{
 
     void OnTriggerExit(Collider other) {
         MessagePanel.SetItensTrueOrFalse(false);
-        MessagePanel.setTroca_de_ItensTrue(false);
     }
 
     void getComponent(){

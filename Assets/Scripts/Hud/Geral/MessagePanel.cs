@@ -41,16 +41,35 @@ public class MessagePanel : MonoBehaviour{
     public GameObject PanelConfirmacaoItem;
     public static bool PanelConfirmacaoItemTrue;
 
+    public int tempoSeg;
+    public int timeFrameQuantidade;
+
+    public int timeFrameAtual;
 
     void Awake(){
+        timeFrameQuantidade = 40;
         SetItensTrueOrFalse(false);
         // Open_ClosePanelTroca_de_Itens(true);
         
     }
 
+    void Update(){
+        setTempo();
+    }
+
     void FixedUpdate(){
         ItensTrues();
         ValoresNoHud();
+    }
+
+    public void setTempo(){
+        timeFrameAtual += 1;
+
+        if(timeFrameAtual == timeFrameQuantidade){
+            tempoSeg += 1;
+            timeFrameQuantidade = 0;
+        }
+
     }
 
     public static void SetItensTrueOrFalse(bool selecao){
@@ -59,7 +78,7 @@ public class MessagePanel : MonoBehaviour{
         setDurabilidadeTrue(selecao);
         setNivelTrue(selecao);
         setDanoTrue(selecao);
-        setTroca_de_ItensTrue(selecao);
+        // setTroca_de_ItensTrue(selecao);
     }
 
     public void ItensTrues(){
@@ -141,6 +160,7 @@ public class MessagePanel : MonoBehaviour{
     }
 
     public void Open_ClosePanelTroca_de_Itens(bool selecao){
+        var tempo = 
         PanelTroca_de_Itens.SetActive(selecao);
     }
 
@@ -169,6 +189,7 @@ public class MessagePanel : MonoBehaviour{
     public static void setDanoTrue(bool selecao){
         dano_curaItemTrue = selecao;
     }
+
 
     public static void setTroca_de_ItensTrue(bool selecao){
         TrocaItensTrue = selecao;

@@ -131,12 +131,12 @@ public class HudArmaTrue : MonoBehaviour{
         if(selecaoString == "arma1"){
             var arma = returnArmaString();
             Arma1Ativa_Desativa(arma,selecaoBool);
-            InventarioHud.setArma1EspadaAtiva_DesativaBool(true);
+            InventarioHud.setArma1EspadaAtiva_DesativaBool(selecaoBool);
         }
         else if(selecaoString == "arma2"){
             var arma = returnArmaString();
             Arma2Ativa_Desativa(arma,selecaoBool);
-            InventarioHud.setArma2EspadaAtiva_DesativaBool(true);
+            InventarioHud.setArma2EspadaAtiva_DesativaBool(selecaoBool);
         }
     }
 
