@@ -55,6 +55,7 @@ public class MessagePanel : MonoBehaviour{
 
     void Update(){
         setTempo();
+        resetTempo();
     }
 
     void FixedUpdate(){
@@ -69,7 +70,11 @@ public class MessagePanel : MonoBehaviour{
             tempoSeg += 1;
             timeFrameQuantidade = 0;
         }
-
+    }
+    public void resetTempo(){
+        if(tempoSeg == 10){
+            tempoSeg = 0;
+        }
     }
 
     public static void SetItensTrueOrFalse(bool selecao){
@@ -160,8 +165,13 @@ public class MessagePanel : MonoBehaviour{
     }
 
     public void Open_ClosePanelTroca_de_Itens(bool selecao){
-        var tempo = 
-        PanelTroca_de_Itens.SetActive(selecao);
+        if(tempoSeg == 5){
+            PanelTroca_de_Itens.SetActive(false);
+        }
+        else{
+            PanelTroca_de_Itens.SetActive(selecao);
+        }
+
     }
 
     
