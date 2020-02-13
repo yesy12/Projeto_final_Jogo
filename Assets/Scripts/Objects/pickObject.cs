@@ -37,11 +37,8 @@ public class pickObject : MonoBehaviour{
             getComponent();
             setMessagePanelInfo(select);
             setEntrouNaArma(true);
-
-            if(arma1 == false || arma2 == false){
-                setEntrouNaArma(true);
-            }
-            else if(arma1 == true && arma2 == true){
+            
+            if(arma1 == true && arma2 == true){
                 MessagePanel.setTroca_de_ItensTrue(true);
             }
             
