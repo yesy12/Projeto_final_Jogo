@@ -52,13 +52,6 @@ public class personagem : MonoBehaviour{
         else if(Input.GetKey("s")){
             transform.Translate(-velocPerson_timeDeltaTime(),zeroF,zeroF);
         }
-        /*
-        else if(Input.GetKey("a")){
-            transform.Translate(zeroF,zeroF,velocPerson_timeDeltaTime());
-        }
-        else if(Input.GetKey("d")){
-            transform.Translate(zeroF,zeroF,-velocPerson_timeDeltaTime());
-        }*/
 
        else if(Input.GetKey("a")){
             transform.Rotate(zeroF,-velocPersonRot_timeDeltaTime(),zeroF);
@@ -122,7 +115,6 @@ public class personagem : MonoBehaviour{
                 FaltaDeRecurso.setMessageRecursoTrue(true);
                 FaltaDeRecurso.setMessageRecursoFaltante("1");                
             }
-            //HudArmaTrue.Arma1DurabilidadeAtual -= 1;
             BorderSelected.setItemSelect(1);
         }
         else if(Input.GetKeyDown("2")){
@@ -134,8 +126,6 @@ public class personagem : MonoBehaviour{
                 FaltaDeRecurso.setMessageRecursoTrue(true);
                 FaltaDeRecurso.setMessageRecursoFaltante("2");                
             }
-
-            //HudArmaTrue.Arma2DurabilidadeAtual -=1;
             BorderSelected.setItemSelect(2);
         }        
         else if(Input.GetKeyDown("3")){ 

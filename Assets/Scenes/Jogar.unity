@@ -355,6 +355,7 @@ GameObject:
   - component: {fileID: 115482702}
   - component: {fileID: 115482701}
   - component: {fileID: 115482703}
+  - component: {fileID: 115482704}
   m_Layer: 0
   m_Name: inimigo
   m_TagString: inimigo
@@ -480,6 +481,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quantidadeDeXp: 1001
+--- !u!114 &115482704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115482696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1843312e29576c48a7c81c74da5ff60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  person: {fileID: 1138841730}
+  velocityEnemy: 0
+  arma1: 0
+  arma2: 0
+  dano: 2
+  tag: 
+  personagem: {fileID: 1731778340}
 --- !u!1001 &124001425
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3607,6 +3627,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4881074087371482697, guid: ab94af6645225b844b34e06b8238b84a,
     type: 3}
   m_PrefabInstance: {fileID: 1726344934}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1731778340 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4427101821606990534, guid: e9b0e28d0aea6b14b80eefb057434764,
+    type: 3}
+  m_PrefabInstance: {fileID: 561955091}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1759067319
 PrefabInstance:
