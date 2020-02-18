@@ -25,6 +25,6 @@ public class MenuInicial : MonoBehaviour{
     }
 
     public void Voltar(){
-        SceneManager.LoadScene("MenuInicial");
+        SceneManager.LoadScene("Menu");
     }
 }
