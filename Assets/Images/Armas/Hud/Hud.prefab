@@ -663,6 +663,9 @@ MonoBehaviour:
   dano_curaPanelText: {fileID: 131172426315926706}
   PanelTroca_de_Itens: {fileID: 762569688871557230}
   PanelConfirmacaoItem: {fileID: 7330217190968960567}
+  tempoSeg: 0
+  timeFrameQuantidade: 0
+  timeFrameAtual: 0
 --- !u!114 &131172424640229214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -826,6 +829,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cde3f7b436d384f4ea0eb50b3207e3c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  messagePanel: {fileID: 0}
+  armaString: 
 --- !u!1 &131172424652764643
 GameObject:
   m_ObjectHideFlags: 0
@@ -6173,7 +6178,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6432975141914381385
 RectTransform:
   m_ObjectHideFlags: 0
