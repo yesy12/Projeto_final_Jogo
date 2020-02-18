@@ -13,7 +13,7 @@ public class MenuInicial : MonoBehaviour{
     }
 
     public void Jogar(){
-        SceneManager.LoadScene("Albion");
+        SceneManager.LoadScene("Jogar");
     }
 
     public void Controles(){
