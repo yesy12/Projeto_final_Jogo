@@ -29,6 +29,5 @@ public class MessagePanelTrocaDeItens_Buttons : MonoBehaviour{
 
     public void buttonNo(){
         messagePanel.Open_ClosePanelConfirmacaoItem(false);
-        print("não");
     }
 }
