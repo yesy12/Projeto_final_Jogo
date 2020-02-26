@@ -4,27 +4,23 @@ using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class MenuInicial : MonoBehaviour{
-    void Start(){
-        
-    }
-
-    void Update(){
-        
-    }
 
     public void Jogar(){
         SceneManager.LoadScene("Jogar");
     }
 
     public void Controles(){
+        print("1");
         SceneManager.LoadScene("Controles");
     }
 
     public void Creditos(){
+        print("2");
         SceneManager.LoadScene("Creditos");
     }
 
-    public void Voltar(){
+    public void Menu(){
+        print("3");
         SceneManager.LoadScene("Menu");
     }
 }
