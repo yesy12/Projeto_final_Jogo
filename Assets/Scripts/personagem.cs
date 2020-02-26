@@ -47,7 +47,6 @@ public class personagem : MonoBehaviour{
         //x,y,z
         if(Input.GetKey("w")){
             transform.Translate(velocPerson_timeDeltaTime(),zeroF,zeroF);
-            // Debug.Log("w");
         }
         else if(Input.GetKey("s")){
             transform.Translate(-velocPerson_timeDeltaTime(),zeroF,zeroF);
