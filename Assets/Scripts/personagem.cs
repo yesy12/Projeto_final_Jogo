@@ -74,10 +74,6 @@ public class personagem : MonoBehaviour{
             StaminaNoPercent.setMostrarStaminaBool(false);
             XpNoPercent.setMostrarXpBool(false);
         }
-        else if(Input.GetKey("g")){
-            //Debug.Log(444);
-            print(returnDanoArma1Personagem());
-        }
 
         else if(Input.GetKeyDown("e")){
             var arma1 = HudArmaTrue.returnArmaBool("arma1");
@@ -86,18 +82,15 @@ public class personagem : MonoBehaviour{
                 setApertouE(true);
             }
         }
-        else if(Input.GetKeyDown("l")){
-            FaltaDeRecurso.setMessageRecursoTrue(false);
-        }
-        else if(Input.GetKeyDown("i") && apertouI == false){
-            InventarioHud.setInventarioAtiva_DesativaBool(true);
-            setApertouI(true);
-        }
-        else if(Input.GetKeyDown("i") && apertouI == true){
-            InventarioHud.setInventarioAtiva_DesativaBool(false);
-            InventarioHud.setDescricaoInventarioBoolAtiva_DesativaBool(false);
-            setApertouI(false);
-        }        
+        // else if(Input.GetKeyDown("i") && apertouI == false){
+        //     InventarioHud.setInventarioAtiva_DesativaBool(true);
+        //     setApertouI(true);
+        // }
+        // else if(Input.GetKeyDown("i") && apertouI == true){
+        //     InventarioHud.setInventarioAtiva_DesativaBool(false);
+        //     InventarioHud.setDescricaoInventarioBoolAtiva_DesativaBool(false);
+        //     setApertouI(false);
+        // }        
     }
 
     void ControlesHudBar(){
