@@ -29,6 +29,18 @@ public class InventarioHud : MonoBehaviour{
         setPocoesOnHud();
     }
 
+    public static void setEscolherQuantidadePocoesEspecifica(string selecao,string parametro, int quantidade){
+        if(selecao == "pocoes_life"){
+            setQuantidadePocoesLife(quantidade,parametro);
+        }
+        else if(selecao == "pocoes_stamina"){
+            setQuantidadePocoesStamina(quantidade,parametro);
+        }
+        else if(selecao == "pocoes_xp"){
+            setQuantidadePocoesXp(quantidade,parametro);
+        }
+    }
+
     public static void setQuantidadePocoesLife(int quantidade,string parametro=""){
         if(parametro == "somar"){
             quantidadePocoesLifeInt += quantidade;

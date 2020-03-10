@@ -11,6 +11,9 @@ public class pickObject : MonoBehaviour{
     public string select;
 
     public ArmorSetDurability ObjetoArmorSetDurability;
+    public QuantidadeDeItens quantidadeDeItens;
+
+    public int quantidadeDeItensInt;
 
     public static bool entrouNaArma;
     public static bool entrouNoItem;
@@ -31,23 +34,24 @@ public class pickObject : MonoBehaviour{
     void OnTriggerEnter(Collider other) {
         select = other.tag;
 
-        // if(select == "espada" || select == "machado"){
-        //     objeto = other.gameObject;
+        if(select == "espada" || select == "machado"){
+            objeto = other.gameObject;
 
-        //     setArmasBool();
-        //     getComponent();
-        //     setMessagePanelInfo(select);
-        //     setEntrouNaArma(true);
+            setArmasBool();
+            getComponent();
+            setMessagePanelInfo(select);
+            setEntrouNaArma(true);
             
-        //     if(arma1 == true && arma2 == true){
-        //         MessagePanel.setTroca_de_ItensTrue(true);
-        //     }
-        // }
+            if(arma1 == true && arma2 == true){
+                MessagePanel.setTroca_de_ItensTrue(true);
+            }
+        }
 
-        // else 
-        if(select == "pocoes_life"){
+        else if(select == "pocoes_life" || select == "pocoes_xp" || select == "pocoes_stamina"){ 
             objeto = other.gameObject;
             
+            quantidadeDeItens = objeto.GetComponent<QuantidadeDeItens>();
+            quantidadeDeItensInt = quantidadeDeItens.quantidade;
             setEntrouNoItem(true);
 
         }
@@ -77,7 +81,7 @@ public class pickObject : MonoBehaviour{
                 setEntrouNaArma(false);
             }
             else if(returnEntrouNoItem() == true){
-                
+                InventarioHud.setEscolherQuantidadePocoesEspecifica(select,"somar",quantidadeDeItensInt);
                 personagem.setApertouE(false);
                 setEntrouNoItem(false);
             }
