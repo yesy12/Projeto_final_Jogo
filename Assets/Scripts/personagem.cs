@@ -135,39 +135,39 @@ public class personagem : MonoBehaviour{
         else if(Input.GetKeyDown("4")){
             setArmaSelecionada("");  
             if(InventarioHud.returnQuantidadePocoesStaminaInt() > 0){
-                StaminaNoPercent.somarStamina(10);
-                InventarioHud.diminuirPocoesStamina(1); 
+                // StaminaNoPercent.somarStamina(10);
+                // InventarioHud.diminuirPocoesStamina(1); 
             }
             else{
-                FaltaDeRecurso.setMessageRecursoTrue(true);
-                FaltaDeRecurso.setMessageRecursoFaltante("4");
+                // FaltaDeRecurso.setMessageRecursoTrue(true);
+                // FaltaDeRecurso.setMessageRecursoFaltante("4");
             }  
             BorderSelected.setItemSelect(4);
         }
-        else if(Input.GetKeyDown("5")){
-            setArmaSelecionada("");  
-            if(InventarioHud.returnQuantidadePocoesXpInt() > 0){
-                XpNoPercent.somaXp(1);
-                InventarioHud.diminuirPocoesXp(1);
-            }   
-            else{
-                FaltaDeRecurso.setMessageRecursoTrue(true);
-                FaltaDeRecurso.setMessageRecursoFaltante("5");
-            }  
-            BorderSelected.setItemSelect(5);    
-        }
-        else if(Input.GetKeyDown("6")){
-            setArmaSelecionada("0");  
-            if(InventarioHud.returnQuantidadeBauInt() > 0){
-                //XpNoPercent.somaXp(1);
-                InventarioHud.diminuirBau(1);
-            }   
-            else{
-                FaltaDeRecurso.setMessageRecursoTrue(true);
-                FaltaDeRecurso.setMessageRecursoFaltante("6");
-            }  
-            BorderSelected.setItemSelect(6);     
-        }   
+        // else if(Input.GetKeyDown("5")){
+        //     setArmaSelecionada("");  
+        //     if(InventarioHud.returnQuantidadePocoesXpInt() > 0){
+        //         XpNoPercent.somaXp(1);
+        //         InventarioHud.diminuirPocoesXp(1);
+        //     }   
+        //     else{
+        //         FaltaDeRecurso.setMessageRecursoTrue(true);
+        //         FaltaDeRecurso.setMessageRecursoFaltante("5");
+        //     }  
+        //     BorderSelected.setItemSelect(5);    
+        // }
+        // else if(Input.GetKeyDown("6")){
+        //     setArmaSelecionada("0");  
+        //     if(InventarioHud.returnQuantidadeBauInt() > 0){
+        //         //XpNoPercent.somaXp(1);
+        //         InventarioHud.diminuirBau(1);
+        //     }   
+        //     else{
+        //         FaltaDeRecurso.setMessageRecursoTrue(true);
+        //         FaltaDeRecurso.setMessageRecursoFaltante("6");
+        //     }  
+        //     BorderSelected.setItemSelect(6);     
+        // }   
      
     }
 

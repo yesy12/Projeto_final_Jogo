@@ -169,12 +169,12 @@ public class ButtonInfoSlot : MonoBehaviour{
         var armaMachadoBool = false;
 
         if(getSlot() == 1){
-            armaEspadaBool = InventarioHud.returnArma1EspadaAtiva_DesativaBool();
-            armaMachadoBool = InventarioHud.returnArma1MachadoAtiva_DesativaBool();
+            // armaEspadaBool = InventarioHud.returnArma1EspadaAtiva_DesativaBool();
+            // armaMachadoBool = InventarioHud.returnArma1MachadoAtiva_DesativaBool();
         }
         else if(getSlot() == 2){
-            armaEspadaBool = InventarioHud.returnArma2EspadaAtiva_DesativaBool();
-            armaMachadoBool = InventarioHud.returnArma2MachadoAtiva_DesativaBool();
+            // armaEspadaBool = InventarioHud.returnArma2EspadaAtiva_DesativaBool();
+            // armaMachadoBool = InventarioHud.returnArma2MachadoAtiva_DesativaBool();
         }
 
         var select = "";

@@ -27,17 +27,17 @@ public class InventarioHud : MonoBehaviour{
     // Hud Inventário
 
     //Armas
-    public GameObject Arma1Espada;
-    public static bool Arma1EspadaBool;
-    public GameObject Arma1Machado;
-    public static bool Arma1MachadoBool;
-    public GameObject DurabilidadeArma1;  
+    // public GameObject Arma1Espada;
+    // public static bool Arma1EspadaBool;
+    // public GameObject Arma1Machado;
+    // public static bool Arma1MachadoBool;
+    // public GameObject DurabilidadeArma1;  
 
-    public GameObject Arma2Espada;
-    public static bool Arma2EspadaBool;
-    public GameObject Arma2Machado; 
-    public static bool Arma2MachadoBool;          
-    public GameObject DurabilidadeArma2;    
+    // public GameObject Arma2Espada;
+    // public static bool Arma2EspadaBool;
+    // public GameObject Arma2Machado; 
+    // public static bool Arma2MachadoBool;          
+    // public GameObject DurabilidadeArma2;    
 
 
     public GameObject Inventario;
@@ -109,31 +109,31 @@ public class InventarioHud : MonoBehaviour{
         //Life
         var life = returnQuantidadePocoesLife();
         setLifeQuantidadeHud(life);
-        setLifeQuantidadeInventario(life);
+        // setLifeQuantidadeInventario(life);
 
         //Stamina
         var stamina = returnQuantidadePocoesStamina();
         setStaminaQuantidadeHud(stamina);
-        setStaminaQuantidadeInventario(stamina);
+        // setStaminaQuantidadeInventario(stamina);
 
         //Xp
         var xp = returnQuantidadePocoesXp();
         setXpQuantidadeHud(xp);
-        setXpQuantidadeInventario(xp);
+        // setXpQuantidadeInventario(xp);
 
         //Bau
         var bau = returnQuantidadeBau();
         setBauQuantidadeHud(bau);
-        setBauQuantidadeInventario(bau);
+        // setBauQuantidadeInventario(bau);
 
-        InventarioAtiva_Desativa();
-        DescricaoInventarioAtiva_Desativa();
+        // InventarioAtiva_Desativa();
+        // DescricaoInventarioAtiva_Desativa();
         
-        setArma1EspadaAtiva_Desativa();
-        setArma1MachadoAtiva_Desativa();
+        // setArma1EspadaAtiva_Desativa();
+        // setArma1MachadoAtiva_Desativa();
 
-        setArma2EspadaAtiva_Desativa();
-        setArma2MachadoAtiva_Desativa();
+        // setArma2EspadaAtiva_Desativa();
+        // setArma2MachadoAtiva_Desativa();
 
         var descricao = returnDescricaoRecursoPanelText();
         setDescricaoRecursoPanelTextHud(descricao);
@@ -307,72 +307,72 @@ public class InventarioHud : MonoBehaviour{
     }
 
     // Arma1 Espada 
-    public static void setArma1EspadaAtiva_DesativaBool(bool selecao){
-        Arma1EspadaBool = selecao;
-    }
+    // public static void setArma1EspadaAtiva_DesativaBool(bool selecao){
+    //     Arma1EspadaBool = selecao;
+    // }
 
-    public static bool returnArma1EspadaAtiva_DesativaBool(){
-        return Arma1EspadaBool;
-    }
+    // public static bool returnArma1EspadaAtiva_DesativaBool(){
+    //     return Arma1EspadaBool;
+    // }
 
-    public void setArma1EspadaAtiva_Desativa(){
-        if(returnArma1EspadaAtiva_DesativaBool() == true){
-            Arma1Espada.SetActive(true);
-        }else{
-            Arma1Espada.SetActive(false);
-        }
-    }
+    // public void setArma1EspadaAtiva_Desativa(){
+    //     if(returnArma1EspadaAtiva_DesativaBool() == true){
+    //         Arma1Espada.SetActive(true);
+    //     }else{
+    //         Arma1Espada.SetActive(false);
+    //     }
+    // }
 
     // Arma1 Machado
-    public static void setArma1MachadoAtiva_DesativaBool(bool selecao){
-        Arma1MachadoBool = selecao;
-    }
+    // public static void setArma1MachadoAtiva_DesativaBool(bool selecao){
+    //     Arma1MachadoBool = selecao;
+    // }
 
-    public static bool returnArma1MachadoAtiva_DesativaBool(){
-        return Arma1MachadoBool;
-    }
+    // public static bool returnArma1MachadoAtiva_DesativaBool(){
+    //     return Arma1MachadoBool;
+    // }
 
-    public void setArma1MachadoAtiva_Desativa(){
-        if(returnArma1MachadoAtiva_DesativaBool() == true){
-            Arma1Machado.SetActive(true);
-        }else{
-            Arma1Machado.SetActive(false);
-        }
-    }
+    // public void setArma1MachadoAtiva_Desativa(){
+    //     if(returnArma1MachadoAtiva_DesativaBool() == true){
+    //         Arma1Machado.SetActive(true);
+    //     }else{
+    //         Arma1Machado.SetActive(false);
+    //     }
+    // }
 
     // Arma2 Espada
-    public static void setArma2EspadaAtiva_DesativaBool(bool selecao){
-        Arma2EspadaBool = selecao;
-    }
+    // public static void setArma2EspadaAtiva_DesativaBool(bool selecao){
+    //     Arma2EspadaBool = selecao;
+    // }
 
-    public static bool returnArma2EspadaAtiva_DesativaBool(){
-        return Arma2EspadaBool;
-    }
+    // public static bool returnArma2EspadaAtiva_DesativaBool(){
+    //     return Arma2EspadaBool;
+    // }
 
-    public void setArma2EspadaAtiva_Desativa(){
-        if(returnArma2EspadaAtiva_DesativaBool() == true){
-            Arma2Espada.SetActive(true);
-        }else{
-            Arma2Espada.SetActive(false);
-        }
-    }
+    // public void setArma2EspadaAtiva_Desativa(){
+    //     if(returnArma2EspadaAtiva_DesativaBool() == true){
+    //         Arma2Espada.SetActive(true);
+    //     }else{
+    //         Arma2Espada.SetActive(false);
+    //     }
+    // }
 
-    // Arma2 Machado
-    public static void setArma2MachadoAtiva_DesativaBool(bool selecao){
-        Arma2MachadoBool = selecao;
-    }
+    // // Arma2 Machado
+    // public static void setArma2MachadoAtiva_DesativaBool(bool selecao){
+    //     Arma2MachadoBool = selecao;
+    // }
 
-    public static bool returnArma2MachadoAtiva_DesativaBool(){
-        return Arma2MachadoBool;
-    }
+    // public static bool returnArma2MachadoAtiva_DesativaBool(){
+    //     return Arma2MachadoBool;
+    // }
 
-    public void setArma2MachadoAtiva_Desativa(){
-        if(returnArma2MachadoAtiva_DesativaBool() == true){
-            Arma2Machado.SetActive(true);
-        }else{
-            Arma2Machado.SetActive(false);
-        }
-    }
+    // public void setArma2MachadoAtiva_Desativa(){
+    //     if(returnArma2MachadoAtiva_DesativaBool() == true){
+    //         Arma2Machado.SetActive(true);
+    //     }else{
+    //         Arma2Machado.SetActive(false);
+    //     }
+    // }
 
     //Set Quantidade Inventario
     public void setLifeQuantidadeInventario(string texto){
