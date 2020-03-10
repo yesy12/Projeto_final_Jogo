@@ -79,7 +79,7 @@
      <Compile Include="Assets\Scripts\Objects\ItemArray.cs" />
      <Compile Include="Assets\Scripts\Objects\pickObject.cs" />
      <Compile Include="Assets\Scripts\personagem.cs" />
-     <Compile Include="Assets\Scripts\telas\MenuInicial.cs" />
+     <Compile Include="Assets\Scripts\telas\TrocaTela.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Users/LAB02-PC05/Documents/Alison/Projeto Final/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
