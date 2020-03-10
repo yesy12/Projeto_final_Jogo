@@ -157,7 +157,7 @@ public class MessagePanel : MonoBehaviour{
     }
 
     public void Open_CloseNivelPanel(bool selecao){
-        nivelPanelItem.SetActive(true);
+        nivelPanelItem.SetActive(selecao);
     }
 
     public void Open_CloseDanoPanel(bool selecao){
@@ -165,7 +165,7 @@ public class MessagePanel : MonoBehaviour{
     }
 
     public void Open_ClosePanelTroca_de_Itens(bool selecao){
-        if(tempoSeg == 5 &&  pickObject.returnEntrouArma() == false){
+        if(tempoSeg == 5 &&  pickObject.returnEntrouNaArma() == false){
             PanelTroca_de_Itens.SetActive(false);
         }
         else{

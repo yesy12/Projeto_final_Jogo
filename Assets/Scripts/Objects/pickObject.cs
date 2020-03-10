@@ -13,6 +13,7 @@ public class pickObject : MonoBehaviour{
     public ArmorSetDurability ObjetoArmorSetDurability;
 
     public static bool entrouNaArma;
+    public static bool entrouNoItem;
 
     public bool arma1;
     public bool arma2;
@@ -30,46 +31,60 @@ public class pickObject : MonoBehaviour{
     void OnTriggerEnter(Collider other) {
         select = other.tag;
 
-        if(select == "espada" || select == "machado"){
-            objeto = other.gameObject;
+        // if(select == "espada" || select == "machado"){
+        //     objeto = other.gameObject;
 
-            setArmasBool();
-            getComponent();
-            setMessagePanelInfo(select);
-            setEntrouNaArma(true);
+        //     setArmasBool();
+        //     getComponent();
+        //     setMessagePanelInfo(select);
+        //     setEntrouNaArma(true);
             
-            if(arma1 == true && arma2 == true){
-                MessagePanel.setTroca_de_ItensTrue(true);
-            }
+        //     if(arma1 == true && arma2 == true){
+        //         MessagePanel.setTroca_de_ItensTrue(true);
+        //     }
+        // }
+
+        // else 
+        if(select == "pocoes_life"){
+            objeto = other.gameObject;
             
+            setEntrouNoItem(true);
+
         }
     }
 
     void removerItem(){
-        if(personagem.getApertouE() == true && returnEntrouArma() == true ){
+        if(personagem.getApertouE() == true){
+            if(returnEntrouNaArma() == true ){
             
             //AmorSetDurability
-            var durabilidade = ObjetoArmorSetDurability.returnDurability();
-            var dano = ObjetoArmorSetDurability.returnDano();
-            var level = ObjetoArmorSetDurability.returnLevel();
+                var durabilidade = ObjetoArmorSetDurability.returnDurability();
+                var dano = ObjetoArmorSetDurability.returnDano();
+                var level = ObjetoArmorSetDurability.returnLevel();
 
-            //Hud
-            HudArmaTrue.setArmaString(select);
-            HudArmaTrue.setArmaSwitchBool(true);
-            HudArmaTrue.setArmaDurabilidade_Arma1_Arma2(durabilidade);
-            HudArmaTrue.setArmaLevel_Arma1_Arma2(level);
-            HudArmaTrue.setArmaDano_Arma1_Arma2(dano);
-            HudArmaTrue.setDano(dano); 
+                //Hud
+                HudArmaTrue.setArmaString(select);
+                HudArmaTrue.setArmaSwitchBool(true);
+                HudArmaTrue.setArmaDurabilidade_Arma1_Arma2(durabilidade);
+                HudArmaTrue.setArmaLevel_Arma1_Arma2(level);
+                HudArmaTrue.setArmaDano_Arma1_Arma2(dano);
+                HudArmaTrue.setDano(dano); 
+
+                //Geral
+                MessagePanel.SetItensTrueOrFalse(false);
+                MessagePanel.setTroca_de_ItensTrue(false);
+                ItemArray.RemoverItem(objeto);
+                setEntrouNaArma(false);
+            }
+            else if(returnEntrouNoItem() == true){
+                
+                personagem.setApertouE(false);
+                setEntrouNoItem(false);
+            }
 
             //Personagem
             personagem.setApertouE(false);
-
-            //Geral
-            MessagePanel.SetItensTrueOrFalse(false);
-            MessagePanel.setTroca_de_ItensTrue(false);
-            ItemArray.RemoverItem(objeto);
             Destroy(objeto);
-            setEntrouNaArma(false);
         }
     }
 
@@ -103,8 +118,16 @@ public class pickObject : MonoBehaviour{
         entrouNaArma = selecao;
     }
 
-    public static bool returnEntrouArma(){
+    public static bool returnEntrouNaArma(){
         return entrouNaArma;
+    }
+
+    public static void setEntrouNoItem(bool selecao){
+        entrouNoItem = selecao;
+    }
+
+    public static bool returnEntrouNoItem(){
+        return entrouNoItem;
     }
 
 

@@ -76,11 +76,12 @@ public class personagem : MonoBehaviour{
         }
 
         else if(Input.GetKeyDown("e")){
-            var arma1 = HudArmaTrue.returnArmaBool("arma1");
-            var arma2 = HudArmaTrue.returnArmaBool("arma2");
-            if(arma1 == false || arma2 == false){
-                setApertouE(true);
-            }
+            setApertouE(true);
+            // var arma1 = HudArmaTrue.returnArmaBool("arma1");
+            // var arma2 = HudArmaTrue.returnArmaBool("arma2");
+            // if(arma1 == false || arma2 == false){
+            //     setApertouE(true);
+            // }
         }
         // else if(Input.GetKeyDown("i") && apertouI == false){
         //     InventarioHud.setInventarioAtiva_DesativaBool(true);
