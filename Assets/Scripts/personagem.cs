@@ -122,9 +122,9 @@ public class personagem : MonoBehaviour{
         }        
         else if(Input.GetKeyDown("3")){ 
             setArmaSelecionada("");            
-            if(InventarioHud.returnQuantidadePocoesLifeInt() > 0){
+            if(InventarioHud.returnQuantidadePocoesLife() > 0){
                 LifeNoPercent.somarVida(10);
-                InventarioHud.diminuirPocoesLife(1);
+                InventarioHud.setQuantidadePocoesLife(1,"diminuir");
             }
             else{
                 FaltaDeRecurso.setMessageRecursoTrue(true);
@@ -134,40 +134,28 @@ public class personagem : MonoBehaviour{
         }
         else if(Input.GetKeyDown("4")){
             setArmaSelecionada("");  
-            if(InventarioHud.returnQuantidadePocoesStaminaInt() > 0){
-                // StaminaNoPercent.somarStamina(10);
-                // InventarioHud.diminuirPocoesStamina(1); 
+            if(InventarioHud.returnQuantidadePocoesStamina() > 0){
+                StaminaNoPercent.somarStamina(10);
+                InventarioHud.setQuantidadePocoesStamina(1,"diminuir");
             }
             else{
-                // FaltaDeRecurso.setMessageRecursoTrue(true);
-                // FaltaDeRecurso.setMessageRecursoFaltante("4");
+                FaltaDeRecurso.setMessageRecursoTrue(true);
+                FaltaDeRecurso.setMessageRecursoFaltante("4");
             }  
             BorderSelected.setItemSelect(4);
         }
-        // else if(Input.GetKeyDown("5")){
-        //     setArmaSelecionada("");  
-        //     if(InventarioHud.returnQuantidadePocoesXpInt() > 0){
-        //         XpNoPercent.somaXp(1);
-        //         InventarioHud.diminuirPocoesXp(1);
-        //     }   
-        //     else{
-        //         FaltaDeRecurso.setMessageRecursoTrue(true);
-        //         FaltaDeRecurso.setMessageRecursoFaltante("5");
-        //     }  
-        //     BorderSelected.setItemSelect(5);    
-        // }
-        // else if(Input.GetKeyDown("6")){
-        //     setArmaSelecionada("0");  
-        //     if(InventarioHud.returnQuantidadeBauInt() > 0){
-        //         //XpNoPercent.somaXp(1);
-        //         InventarioHud.diminuirBau(1);
-        //     }   
-        //     else{
-        //         FaltaDeRecurso.setMessageRecursoTrue(true);
-        //         FaltaDeRecurso.setMessageRecursoFaltante("6");
-        //     }  
-        //     BorderSelected.setItemSelect(6);     
-        // }   
+        else if(Input.GetKeyDown("5")){
+            setArmaSelecionada("");  
+            if(InventarioHud.returnQuantidadePocoesXp() > 0){
+                XpNoPercent.somaXp(1);
+                InventarioHud.setQuantidadePocoesXp(1,"diminuir");
+            }   
+            else{
+                FaltaDeRecurso.setMessageRecursoTrue(true);
+                FaltaDeRecurso.setMessageRecursoFaltante("5");
+            }  
+            BorderSelected.setItemSelect(5);    
+        }
      
     }
 
