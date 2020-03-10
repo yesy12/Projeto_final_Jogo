@@ -47,14 +47,35 @@ public class pickObject : MonoBehaviour{
             }
         }
 
-        else if(select == "pocoes_life" || select == "pocoes_xp" || select == "pocoes_stamina"){ 
-            objeto = other.gameObject;
-            
-            quantidadeDeItens = objeto.GetComponent<QuantidadeDeItens>();
-            quantidadeDeItensInt = quantidadeDeItens.quantidade;
-            setEntrouNoItem(true);
+        else {
+            var descricao = "";
+            if(select == "pocoes_life"){
+                descricao = "Pocoes de Vida";
+            }
+            else if(select == "pocoes_xp"){
+                descricao = "Pocoes de Xp";
+            }
+            else if(select == "pocoes_stamina"){
+                descricao = "Pocoes de Stamina";
+            }
 
+            if(select == "pocoes_life" || select == "pocoes_xp" || select == "pocoes_stamina"){ 
+                objeto = other.gameObject;
+
+                quantidadeDeItens = objeto.GetComponent<QuantidadeDeItens>();
+                quantidadeDeItensInt = quantidadeDeItens.quantidade;
+
+                PocoesPanel.setClose_Open_Pocoes_Panel(true);
+
+                PocoesPanel.setDescricaoPanel(descricao);
+                var quantidade = "Quantidade " + quantidadeDeItensInt;
+                PocoesPanel.setQuantidadePanel(quantidade);
+
+                setEntrouNoItem(true);
+
+            }
         }
+
     }
 
     void removerItem(){
@@ -84,6 +105,7 @@ public class pickObject : MonoBehaviour{
                 InventarioHud.setEscolherQuantidadePocoesEspecifica(select,"somar",quantidadeDeItensInt);
                 personagem.setApertouE(false);
                 setEntrouNoItem(false);
+                PocoesPanel.setClose_Open_Pocoes_Panel(false);
             }
 
             //Personagem

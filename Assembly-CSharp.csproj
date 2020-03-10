@@ -64,6 +64,7 @@
      <Compile Include="Assets\Scripts\Hud\Geral\InventarioHud.cs" />
      <Compile Include="Assets\Scripts\Hud\Geral\MessagePanel.cs" />
      <Compile Include="Assets\Scripts\Hud\Geral\MessagePanelTrocaDeItens_Buttons.cs" />
+     <Compile Include="Assets\Scripts\Hud\Geral\PocoesPanel.cs" />
      <Compile Include="Assets\Scripts\Hud\NoPercent\LifeNoPercent.cs" />
      <Compile Include="Assets\Scripts\Hud\NoPercent\StaminaNoPercent.cs" />
      <Compile Include="Assets\Scripts\Hud\NoPercent\XpNoPercent.cs" />

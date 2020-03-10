@@ -584,6 +584,7 @@ GameObject:
   - component: {fileID: 7804350504316989277}
   - component: {fileID: 1071494136881753669}
   - component: {fileID: 3529190092739530383}
+  - component: {fileID: 5827562674090133693}
   m_Layer: 5
   m_Name: Hud
   m_TagString: Untagged
@@ -909,6 +910,21 @@ MonoBehaviour:
   quantidadePocoesLifeText: {fileID: 3402233797150986451}
   quantidadePocoesStaminaText: {fileID: 5162359632704401817}
   QuantidadePocoesXpText: {fileID: 3686635967807168913}
+--- !u!114 &5827562674090133693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131172424640229212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34404426bc31f1146a7ec08211d1477d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PocoesPanelGameObject: {fileID: 7772370586885562627}
+  descricaoPocoesPanel: {fileID: 185672919948850603}
+  quantidadePocoesPanel: {fileID: 5771770933378017990}
 --- !u!1 &131172424652764643
 GameObject:
   m_ObjectHideFlags: 0
@@ -6867,7 +6883,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5688112319163176524
 RectTransform:
   m_ObjectHideFlags: 0
